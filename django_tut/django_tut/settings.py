@@ -40,6 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+# appname:app_description
+USER_APPNAMES = [
+    ('polls','Cool user polls!'),
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -55,7 +60,7 @@ ROOT_URLCONF = 'django_tut.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/mnt/storage1/work_prog_projects/advanced_python_tut_ws/django_tut/django_tut/templates',],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

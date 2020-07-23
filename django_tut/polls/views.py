@@ -4,8 +4,28 @@ from .models import Choice, Question
 from django.template import loader
 from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
+from django.views import generic
 
 # Create your views here.
+
+class IndexView(generic.ListView):
+    template_name = 'polls/index.html'
+    context_object_name = 'qlist'
+    
+    def get_queryset(self):
+        return Question.objects.order_by('id')
+
+class DetailView(generic.DetailView):
+    template_name = 'polls/detail.html'
+    model = Question
+
+
+class ResultsView(generic.DetailView):
+    template_name = 'polls/results.html'
+    model = Question
+
+#obsolete
+
 def index(request):
     qlist = Question.objects.order_by('id')
     context = {
