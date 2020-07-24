@@ -1,0 +1,13 @@
+<h2>Welcome to my site!</h2>
+<h4>My apps:</h4>
+{% if apps %}
+    {% for name, desc in apps %}
+    {% with name|add:":index" as arg %}
+        <ol>
+        <li><a href="{% url arg %}">{{ desc }}</a></li>
+        </ol>
+    {% endwith %}
+    {% endfor %}
+{% else %}
+    <p>No apps are currently available.</p>
+{% endif %}    
