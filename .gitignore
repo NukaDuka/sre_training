@@ -2,3 +2,4 @@
 pythontips
 *.log
 *.pyc
+__pycache__
