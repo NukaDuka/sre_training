@@ -1,0 +1,39 @@
+version: "3.6"
+networks:
+  user_bridge:
+    external: true
+
+services:
+  main:
+    build: ./main
+    ports:
+      - 8080:8080
+    environment: 
+      APP_COLOR: 'blue'
+    healthcheck:
+      test: ["CMD", "python3", "/opt/source-code/hc.py"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    volumes:
+      - /var/lib/docker/volumes/data1/_data:/tmp/data
+    networks:
+      - user_bridge
+
+
+  setcolor:
+    build: ./setcolor
+    ports:
+      - 8081:8081
+    healthcheck:
+      test: ["CMD", "python3", "/opt/source-code/hc.py"]
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 5s
+    volumes:
+      - /var/lib/docker/volumes/data1/_data:/tmp/data
+    networks:
+      - user_bridge
+      
