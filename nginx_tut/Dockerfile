@@ -1,7 +1,8 @@
 FROM ubuntu:focal
 
-COPY ./data .
+COPY ./config_data .
 COPY ./systemd/nginx.service /lib/systemd/system/nginx.service
+COPY ./sample_webpage /sites/lec10
 
 ENV TERM=xterm-256color
 ARG DEBIAN_FRONTEND=noninteractive
@@ -11,5 +12,7 @@ RUN bash -c 'apt-get update && apt-get install -y curl gnupg2 ca-certificates ls
     | tee /etc/apt/sources.list.d/nginx.list && \
     curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add - && \
     apt-get update && apt-get install -y nginx && python3 -m pip install -r requirements.txt && nginx'
+
+COPY ./nginx_configs/module-3.conf /etc/nginx/nginx.conf
 
 CMD bash -c 'nginx && python3 hc.py'
