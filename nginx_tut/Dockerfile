@@ -2,7 +2,7 @@ FROM ubuntu:focal
 
 COPY ./config_data .
 COPY ./systemd/nginx.service /lib/systemd/system/nginx.service
-COPY ./sample_webpage /sites/lec10
+COPY ./sample_webpage /sites/module3
 
 ENV TERM=xterm-256color
 ARG DEBIAN_FRONTEND=noninteractive
