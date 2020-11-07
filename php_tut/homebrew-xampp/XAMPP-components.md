@@ -19,7 +19,7 @@
 - ~~Webalizer 2.23-05~~
 - pdf class 0.11.7 (**???**)
 - ~~ncurses 5.9~~
-- mod_perl 2.0.11 (omitting due to incompatibility)
+- mod_perl 2.0.11 (**Omitting due to incompatibility**)
 - ~~FreeTDS 0.91~~
 - ~~gettext 0.19.8.1~~
 - ~~IMAP C-Client 2007e~~
