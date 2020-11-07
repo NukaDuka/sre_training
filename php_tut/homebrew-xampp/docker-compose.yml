@@ -1,0 +1,67 @@
+version: "3.8"
+services:
+  mariadb:
+    image: mariadb:10.4.14-focal
+    secrets:
+        - xampp-mariadb-pwd
+    env_file: ./mariadb.env
+    environment:
+      MYSQL_ROOT_PASSWORD_FILE: /run/secrets/xampp-mariadb-pwd
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$(echo /run/secrets/xampp-mariadb-pwd)
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      xampp-network:
+        aliases:
+          - xampp-mariadb
+          - mariadb
+      prometheus_overlay:
+        aliases:
+          - xampp-mariadb
+    restart: always
+    stop_grace_period: 30s
+    volumes:
+      - xampp-mariadb-volume:/var/lib/mysql
+
+  xampp:
+    image: nukaduka1/custom-xampp:latest
+    environment:
+      PMA_HOST: mariadb
+    healthcheck:
+      test: wget --spider 127.0.0.1
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    restart: always
+    stop_grace_period: 30s
+    networks:
+      xampp-network:
+        aliases:
+          - xampp-pma
+          - pma
+      prometheus_overlay:
+        aliases:
+          - xampp-pma
+    ports:
+      - "80:80"
+      - "443:443"
+
+networks:
+  xampp-network:
+    external: true
+  prometheus_overlay:
+    external: true
+
+volumes:
+  xampp-mariadb-volume:
+    external: true
+  xampp-pma-volume:
+    external: true
+
+secrets:
+  xampp-mariadb-pwd:
+    external: true
