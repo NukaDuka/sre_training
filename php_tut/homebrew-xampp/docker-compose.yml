@@ -49,6 +49,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    volumes:
+      - xampp-pma-volume:/var/www/html/php_tut
 
 networks:
   xampp-network:
