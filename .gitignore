@@ -3,3 +3,4 @@ pythontips
 *.log
 *.pyc
 __pycache__
+jenkins-cli.jar
