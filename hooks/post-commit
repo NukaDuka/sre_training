@@ -1,2 +1,1 @@
 sh /mnt/c/Users/kartik.go/Desktop/Projects/sre_training/php_tut/sync.sh
-curl "https://api.flock.com/hooks/sendMessage/1669dce3-7ae3-4f0f-8868-c3dcdefd7bd0" -X POST -d "{\"text\": \"git post-commit\"}" -H "Content-Type: application/json"
