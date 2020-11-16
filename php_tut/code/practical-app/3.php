@@ -29,7 +29,7 @@
 		echo $i . "<br>";
 	}
 
-	$number = 10
+	$number = 10;
 	switch ($number) {
 		case 0:
 			echo "The number is 0";
