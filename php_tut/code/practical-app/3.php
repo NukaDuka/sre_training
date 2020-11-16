@@ -32,10 +32,10 @@
 	$number = 10;
 	switch ($number) {
 		case 0:
-			echo "The number is 0";
+			echo "The number is 0<br>";
 			break;
 		case 10:
-			echo "The number is 10";
+			echo "The number is 10<br>";
 		default:
 			echo "Bottom text";
 			break;
