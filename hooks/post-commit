@@ -1,1 +1,2 @@
 sh /mnt/c/Users/kartik.go/Desktop/Projects/sre_training/php_tut/sync.sh
+echo "Exit code: $?"
