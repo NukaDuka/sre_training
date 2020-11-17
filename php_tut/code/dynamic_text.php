@@ -19,7 +19,7 @@
         $text = "Text";
         $top = ['top' => 'Top', 'text' => 'Text'];
         for ($i = 1; i < 11; $i++) {
-            sample_text($i)
+            sample_text($i);
         }
     ?>
     <h3><?php echo $top['top'] . " " . $top['text']?></h3>
