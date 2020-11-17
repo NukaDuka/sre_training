@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIN $1000000 HERE!</title>
     <?php
-        function sample_text(int $number) {
+        function sample_text($number) {
             echo $number . " Sample text <br>";
         }
     ?>
