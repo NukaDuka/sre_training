@@ -18,7 +18,7 @@
         $bottom = "Bottom";
         $text = "Text";
         $top = ['top' => 'Top', 'text' => 'Text'];
-        for ($i = 1; i < 11; i++) {
+        for ($i = 1; i < 11; $i++) {
             sample_text($i)
         }
     ?>
