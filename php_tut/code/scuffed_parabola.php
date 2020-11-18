@@ -14,7 +14,7 @@ function nextp($old_x) {
 }
 $i = 0;
 for ($i = 0; $i < 20; $i++) {
-    echo "x: " . $i . ", y: " . nextp($i);
+    echo "x: " . $i . ", y: " . nextp($i) . "<br>";
 }
 
 ?>
