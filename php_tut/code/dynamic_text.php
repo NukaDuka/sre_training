@@ -7,6 +7,7 @@
     <?php
         function sample_text($number) {
             echo $number . " Sample text <br>";
+            return "<hr>";
         }
     ?>
 </head>
@@ -20,7 +21,8 @@
         $top = ['top' => 'Top', 'text' => 'Text'];
         $i = 1;
         for ($i = 1; $i < 11; $i++) {
-            sample_text($i);
+            $ret = sample_text($i);
+            echo $ret . "<br>";
         }
     ?>
     <h3><?php echo $top['top'] . " " . $top['text']?></h3>
