@@ -12,8 +12,8 @@
 function nextp($old_x) {
     return (3 * pow($old_x, 2)) + (2 * $old_x) + 1;
 }
-$i = -10;
-for ($i; $i <= 10; $i++) {
+$i = -20;
+for ($i; $i <= 20; $i++) {
     $y = (int) ceil(nextp($i) / 10);
     $j = 1;
     for ($j; $j <= $y; $j++) echo "+";
