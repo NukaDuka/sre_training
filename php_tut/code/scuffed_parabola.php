@@ -14,7 +14,7 @@ function nextp($old_x) {
 }
 $i = -10;
 for ($i; $i <= 10; $i++) {
-    echo "x: " . $i . ", y: " . nextp($i) . "<br>";
+    echo "x: " . $i . ", y: " . nextp($i) / 10 . "<br>";
 }
 
 ?>
