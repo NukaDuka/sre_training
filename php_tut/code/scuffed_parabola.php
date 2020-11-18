@@ -14,7 +14,10 @@ function nextp($old_x) {
 }
 $i = -10;
 for ($i; $i <= 10; $i++) {
-    echo "x: " . $i . ", y: " . (int) ceil(nextp($i) / 10) . "<br>";
+    $y = (int) ceil(nextp($i) / 10);
+    $j = 1;
+    for ($j; $j <= $y; $j++) echo "+";
+    echo "<br>"
 }
 
 ?>
