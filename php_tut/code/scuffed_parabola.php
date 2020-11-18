@@ -8,9 +8,9 @@
 <body>
 <?php
 
-#y = 3x^2+2x+35
+#y = 4x^2-2x+35
 function nextp($old_x) {
-    return (3 * pow($old_x, 2)) + (2 * $old_x) + 35;
+    return (4 * pow($old_x, 2)) + (-2 * $old_x) + 35;
 }
 $i = -20;
 for ($i; $i <= 20; $i++) {
