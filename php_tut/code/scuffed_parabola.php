@@ -11,7 +11,7 @@
 $param1 = rand(3, 6);
 $param2 = rand(2, 5);
 $param3 = rand(1, 20);
-echo "Equation: " . $param1 . "x^2 + " . $param2 . "x + " . $param3;
+echo "Equation: " . $param1 . "x^2 + " . $param2 . "x + " . $param3 . "<br><hr><br>";
 function nextp($old_x, $param1, $param2, $param3) {
     return ($param1 * pow($old_x, 2)) + ($param2 * $old_x) + $param3;
 }
