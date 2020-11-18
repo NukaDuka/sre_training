@@ -32,10 +32,10 @@
 		return $sum;
 	}
 
-	echo slow_multiply(1, 0);
-	echo slow_multiply(10, 1);
-	echo slow_multiply(45, 2);
-	echo slow_multiply(34, 34);
+	echo slow_multiply(1, 0) . "<br>";
+	echo slow_multiply(10, 1) . "<br>";
+	echo slow_multiply(45, 2) . "<br>";
+	echo slow_multiply(34, 34) . "<br>";
 
 ?>
 
