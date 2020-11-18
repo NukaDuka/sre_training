@@ -19,7 +19,7 @@ $i = -20;
 for ($i; $i <= 20; $i++) {
     $y = (int) ceil(nextp($i, $param1, $param2, $param3) / 10);
     $j = 1;
-    for ($j; $j <= $y; $j++) echo "+";
+    for ($j; $j <= $y; $j++) echo "█";
     echo "<br>";
 }
 
