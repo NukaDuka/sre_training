@@ -17,7 +17,7 @@ for ($i; $i <= 10; $i++) {
     $y = (int) ceil(nextp($i) / 10);
     $j = 1;
     for ($j; $j <= $y; $j++) echo "+";
-    echo "<br>"
+    echo "<br>";
 }
 
 ?>
