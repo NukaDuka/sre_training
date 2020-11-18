@@ -8,9 +8,8 @@
 <body>
 <?php
 
-#y = 4x^2-2x+35
 function nextp($old_x) {
-    return (4 * pow($old_x, 2)) + (-2 * $old_x) + 35;
+    return (rand(-10, 10) * pow($old_x, 2)) + (rand(-10, 10) * $old_x) + rand(11, 20);
 }
 $i = -20;
 for ($i; $i <= 20; $i++) {
