@@ -9,7 +9,7 @@
 <?php
 
 function nextp($old_x) {
-    return (rand(-10, 10) * pow($old_x, 2)) + (rand(-10, 10) * $old_x) + rand(11, 20);
+    return (rand(-1, 10) * pow($old_x, 2)) + (rand(-1, 10) * $old_x) + rand(1, 20);
 }
 $i = -20;
 for ($i; $i <= 20; $i++) {
