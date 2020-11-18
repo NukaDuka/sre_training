@@ -8,9 +8,9 @@
 <body>
 <?php
 
-$param1 = rand(-1, 10)
-$param2 = rand(-1, 10)
-$param3 = rand(1, 20)
+$param1 = rand(-1, 10);
+$param2 = rand(-1, 10);
+$param3 = rand(1, 20);
 function nextp($old_x) {
     return ($param1 * pow($old_x, 2)) + ($param2 * $old_x) + $param3;
 }
