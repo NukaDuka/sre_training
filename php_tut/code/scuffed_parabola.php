@@ -12,7 +12,7 @@
 function nextp($old_x) {
     return (3 * pow($old_x, 2)) + (2 * $old_x) + 1;
 }
-$i = 0
+$i = 0;
 for ($i = 0; $i < 20; $i++) {
     echo "x: " . $i . ", y: " . nextp($i);
 }
