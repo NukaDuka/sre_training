@@ -13,9 +13,14 @@
 
 
 	<?php
-		echo rand(1, 10);
-		echo strtoupper("i am very calm right now and i'm not screaming");
-		echo in_array(1, [2, 3, 4]);
+		echo rand(1, 10) . "<br>";
+		echo strtoupper("i am very calm right now and i'm not screaming") . "<br>";
+		if (in_array(1, [2, 3, 4])) {
+			echo "in array<br>";
+		}
+		else {
+			echo "not in array<br>";
+		}
 ?>
 
 
