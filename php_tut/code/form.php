@@ -15,7 +15,7 @@
 <?php
 
     foreach ($_POST as $item) {
-        echo $item . "<br>"
+        echo $item . "<br>";
     }
 
 ?>
