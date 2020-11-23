@@ -9,9 +9,9 @@
 <?php $a = []; ?>
 <form action="form.php" method="post">
     <?php
-        $n = 1
+        $n = 1;
         foreach ($_POST as $item) {
-            echo '<input type="hidden" name="' . $n . '" value="' . $item . '">'
+            echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
         }
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
     <input type="submit" value="Submit">
