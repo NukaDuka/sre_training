@@ -25,7 +25,8 @@
 <?php
     print_r($_POST);
     if (!isset($_POST["reset"])){
-        foreach ($_POST as $item) {
+        foreach ($_POST as $key => $item) {
+            if ($key == "reset" || $item == "" || $key == "submit") continue;
             echo $item . "<br>";
         }
     }
