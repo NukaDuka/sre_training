@@ -13,6 +13,7 @@
         foreach ($_POST as $item) {
             echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
         }
+    ?>
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
     <input type="submit" value="Submit">
 </form>
