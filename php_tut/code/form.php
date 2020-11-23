@@ -23,7 +23,6 @@
 </form>
 <hr>
 <?php
-    print_r($_POST);
     if (!isset($_POST["reset"])){
         foreach ($_POST as $key => $item) {
             if ($key == "reset" || $item == "" || $key == "submit") continue;
