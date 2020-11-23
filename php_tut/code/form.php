@@ -8,7 +8,7 @@
 <body>
 <?php $a = []; ?>
 <form action="form.php" method="post">
-    <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
+    <input type="text" name="sample_text" id="sample_text" placehold="Sample Text", value="sample"><br>
     <input type="submit" value="Submit">
 </form>
 <hr>
