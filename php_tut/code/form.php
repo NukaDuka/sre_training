@@ -10,7 +10,7 @@
     <?php
         $n = 1;
         foreach ($_POST as $key => $item) {
-            if ($key == "reset" || $item == "") continue;
+            if ($key == "reset" || $item == "" || $key == "submit") continue;
             echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
             $n++;
         }
