@@ -10,7 +10,7 @@
     <?php
         $n = 1;
         foreach ($_POST as $key => $item) {
-            if (!is_numeric($key)) echo "Not a number " . $key;
+            if ($key == "reset") continue;
             echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
             $n++;
         }
