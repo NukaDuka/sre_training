@@ -20,7 +20,7 @@
 </form>
 <hr>
 <?php
-
+    echo $_POST['sample_text'];
     foreach ($_POST as $item) {
         echo $item . "<br>";
         array_push($a, $item);
