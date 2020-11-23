@@ -19,12 +19,10 @@
 </form>
 <hr>
 <?php
-    if(isset($_POST['sample_text'])) {
-        echo "This is Button1 that is selected";
-    }
-    foreach ($_POST as $item) {
-        echo $item . "<br>";
-    }
+    print_r($_POST)
+    //foreach ($_POST as $item) {
+        //echo $item . "<br>";
+    //}
 
 ?>
 <hr>
