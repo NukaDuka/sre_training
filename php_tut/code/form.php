@@ -21,9 +21,10 @@
     <input type="submit" name="submit" value="Submit">
     <input type="submit" name="reset" value="reset">
 </form>
-<hr>
+
 <?php
     if (!isset($_POST["reset"])){
+        echo "<hr>";
         foreach ($_POST as $key => $item) {
             if ($key == "reset" || $item == "" || $key == "submit") continue;
             echo $item . "<br>";
