@@ -23,7 +23,7 @@
 </form>
 <hr>
 <?php
-    print_r($_POST)
+    print_r($_POST);
     if (!isset($_POST, "reset")){
         foreach ($_POST as $item) {
             echo $item . "<br>";
