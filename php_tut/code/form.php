@@ -6,7 +6,7 @@
     <title>Forms</title>
 </head>
 <body>
-<form action="form.php" method="post">
+<form action="form.php" method="post" autocomplete="off">
     <?php
         $n = 1;
         if (!isset($_POST["reset"])) {
