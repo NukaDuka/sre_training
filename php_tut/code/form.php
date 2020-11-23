@@ -6,7 +6,6 @@
     <title>Forms</title>
 </head>
 <body>
-<?php $a = []; ?>
 <form action="form.php" method="post">
     <?php
         $n = 1;
@@ -20,10 +19,11 @@
 </form>
 <hr>
 <?php
-    echo $_POST['sample_text'];
+    if(isset($_POST['sample_text'])) {
+        echo "This is Button1 that is selected";
+    }
     foreach ($_POST as $item) {
         echo $item . "<br>";
-        array_push($a, $item);
     }
 
 ?>
