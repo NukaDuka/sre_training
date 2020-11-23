@@ -11,11 +11,15 @@
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
     <input type="submit" value="Submit">
 </form>
-
+<hr>
 <?php
 
-    echo $_POST;
+    foreach ($_POST as $item) {
+        echo $item . "<br>"
+    }
 
 ?>
+<hr>
+<h2>BOTTOM TEXT</h2>
 </body>
 </html>
