@@ -6,7 +6,7 @@
     <title>Forms</title>
 </head>
 <body>
-
+<?php $a = []; ?>
 <form action="form.php" method="post">
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
     <input type="submit" value="Submit">
@@ -16,6 +16,7 @@
 
     foreach ($_POST as $item) {
         echo $item . "<br>";
+        array_push($a, $item);
     }
 
 ?>
