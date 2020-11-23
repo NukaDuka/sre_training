@@ -25,10 +25,12 @@
 <?php
     if (!isset($_POST["reset"])){
         echo "<hr>";
+        echo "<ol>";
         foreach ($_POST as $key => $item) {
             if ($key == "reset" || $item == "" || $key == "submit") continue;
-            echo $item . "<br>";
+            echo "<h3><li>" . $item . "</li></h3>";
         }
+        echo "</ol>";
     }
 
 
