@@ -9,7 +9,8 @@
 <form action="form.php" method="post">
     <?php
         $n = 1;
-        foreach ($_POST as $item) {
+        foreach ($_POST as $key => $item) {
+            if (!is_numeric($key)) echo "Not a number " . $key;
             echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
             $n++;
         }
