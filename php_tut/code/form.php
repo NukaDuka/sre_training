@@ -9,7 +9,7 @@
 <form action="form.php" method="post">
     <?php
         $n = 1;
-        if (!isset($_POST, "reset")) {
+        if (!isset($_POST["reset"])) {
             foreach ($_POST as $key => $item) {
                 if ($key == "reset" || $item == "" || $key == "submit") continue;
                 echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
@@ -24,7 +24,7 @@
 <hr>
 <?php
     print_r($_POST);
-    if (!isset($_POST, "reset")){
+    if (!isset($_POST["reset"])){
         foreach ($_POST as $item) {
             echo $item . "<br>";
         }
