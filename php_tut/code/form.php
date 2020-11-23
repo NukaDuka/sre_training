@@ -15,7 +15,8 @@
         }
     ?>
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
-    <input type="submit" value="Submit">
+    <input type="submit" name="submit" value="Submit">
+    <input type="submit" name="reset" value="reset">
 </form>
 <hr>
 <?php
