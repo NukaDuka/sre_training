@@ -9,10 +9,12 @@
 <form action="form.php" method="post">
     <?php
         $n = 1;
-        foreach ($_POST as $key => $item) {
-            if ($key == "reset" || $item == "" || $key == "submit") continue;
-            echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
-            $n++;
+        if (!isset($_POST, "reset")) {
+            foreach ($_POST as $key => $item) {
+                if ($key == "reset" || $item == "" || $key == "submit") continue;
+                echo '<input type="hidden" name="' . $n . '" value="' . $item . '">';
+                $n++;
+            }
         }
     ?>
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text"><br>
@@ -22,9 +24,12 @@
 <hr>
 <?php
     print_r($_POST)
-    //foreach ($_POST as $item) {
-        //echo $item . "<br>";
-    //}
+    if (!isset($_POST, "reset")){
+        foreach ($_POST as $item) {
+            echo $item . "<br>";
+        }
+    }
+
 
 ?>
 <hr>
