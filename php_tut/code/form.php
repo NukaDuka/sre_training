@@ -6,7 +6,6 @@
         html,
         body {
             height: 100%;
-            width: 100%;
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
