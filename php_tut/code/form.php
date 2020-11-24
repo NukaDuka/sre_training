@@ -21,9 +21,15 @@
             }
         }
     ?>
-    <input type="text" name="sample_text" id="sample_text" placehold="Sample Text" autofocus><br>
-    <input type="submit" name="submit" value="Submit">
-    <input type="submit" name="reset" value="Reset">
+
+    <div class="form-group">
+        <label for="sample_text">Sample Text:</label>
+        <input type="text" name="sample_text" id="sample_text" placehold="Sample Text" autofocus class="form-control">
+    </div>
+    <div class="form-group">
+        <input type="submit" name="submit" value="Submit" class="btn btn-primary">
+        <input type="submit" name="reset" value="Reset" class="btn btn-primary">
+    </div>
 </form>
 
 <?php
