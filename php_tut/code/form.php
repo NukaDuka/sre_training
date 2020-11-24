@@ -10,7 +10,7 @@
     <title>Forms</title>
 </head>
 <body>
-<div class="mx-auto">
+<div class="mx-auto" style="width: 70%;">
     <form action="form.php" method="post" autocomplete="off">
         <?php
             $n = 1;
