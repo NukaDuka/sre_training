@@ -10,7 +10,7 @@
     <title>Forms</title>
 </head>
 <body>
-<div class="h-100 row align-items-center">
+<div class="align-items-center align-items-center d-flex" style="height:50%; width:70%;">
     <form action="form.php" method="post" autocomplete="off">
         <?php
             $n = 1;
