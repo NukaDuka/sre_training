@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <script href="bootstrap/js/bootstrap.js" rel="stylesheet"></script>
+    <script href="bootstrap/js/jquery.js" rel="stylesheet"></script>
     <title>Forms</title>
 </head>
 <body>
