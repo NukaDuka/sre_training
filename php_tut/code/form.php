@@ -19,7 +19,7 @@
     ?>
     <input type="text" name="sample_text" id="sample_text" placehold="Sample Text" autofocus><br>
     <input type="submit" name="submit" value="Submit">
-    <input type="submit" name="reset" value="reset">
+    <input type="submit" name="reset" value="Reset">
 </form>
 
 <?php
