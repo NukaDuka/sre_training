@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="container h-100 d-flex">
-    <div class="jumbotron justify-content-center align-content-center">
+    <div class="justify-content-center align-content-center">
         <form action="form.php" method="post" autocomplete="off">
             <?php
                 $n = 1;
