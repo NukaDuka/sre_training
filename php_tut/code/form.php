@@ -10,8 +10,8 @@
     <title>Forms</title>
 </head>
 <body>
-<div class="container h-100 d-flex justify-content-center">
-    <div class="my-auto">
+<div class="container h-100 d-flex">
+    <div class="row justify-content-center align-self-center">
         <form action="form.php" method="post" autocomplete="off">
             <?php
                 $n = 1;
