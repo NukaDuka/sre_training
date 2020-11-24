@@ -17,7 +17,7 @@
     <title>Forms</title>
 </head>
 <body>
-<div class="container h-100 d-flex">
+<div class="container h-100 w-100 d-flex">
     <div class="justify-content-center align-self-center">
         <form action="form.php" method="post" autocomplete="off">
             <?php
