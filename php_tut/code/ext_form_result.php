@@ -25,6 +25,10 @@
                 echo '<h3 class="display-4 text-white"> Your message was: "' . $_POST["input"] . '"</h3>';
                 echo '<h1 class="display-4 text-white">THE VOID SAYS HELLO, AND ENJOY YOUR STAY!</h1>';
             }
+            else {
+                echo '<h3 class="display-4 text-white">YOU HAVE SAID NOTHING!</h3>';
+                echo '<h1 class="display-4 text-white">NEVERTHELESS, THE VOID SAYS HELLO, AND ENJOY YOUR STAY!</h1>';
+            }
         ?>
     </div>
     </div>
