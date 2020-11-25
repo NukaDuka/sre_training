@@ -19,12 +19,14 @@
 </head>
 <body>
     <div class="d-flex justify-content-md-center align-items-center vh-100 bg-danger">
+    <div>
         <?php
             if (isset($_POST["input"])) {
-                echo '<h1 class="display-4 text-white"> Your message was: "' . $_POST["input"] . '"</h1><br>';
+                echo '<h1 class="display-4 text-white"> Your message was: "' . $_POST["input"] . '"</h1>';
                 echo '<h1 class="display-4 text-white">THE VOID SAYS HELLO, AND ENJOY YOUR STAY!</h1>';
             }
         ?>
+    </div>
     </div>
 </body>
 </html>
