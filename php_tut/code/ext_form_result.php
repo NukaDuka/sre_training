@@ -25,10 +25,6 @@
                 echo '<h3 class="display-4 text-white"> Your message was: "' . $_POST["input"] . '"</h3>';
                 echo '<h1 class="display-4 text-white">THE VOID SAYS HELLO, AND ENJOY YOUR STAY!</h1>';
             }
-            else {
-                header("Location: ext_form.php", true, 301);
-                exit();
-            }
         ?>
     </div>
     </div>
