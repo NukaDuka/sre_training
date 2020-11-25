@@ -24,7 +24,7 @@
         <?php
             if (isset($_POST["input"])) {
                 echo '<h1 class="display-4"> Your message was: "' . $_POST["input"] . '"</h1>';
-                echo '<h1 class="display-4">T̶͇̩̘̽̓̀̅̔̏̀̿H̴̟̟̆́̅̓́̿̔̾́̅̂̚E̶͇͈̫͔̥̭͓͛̑̍͆̒̾̔̂̐̊͋̈́ ̷̟̫͍̭̗̣͙̟̺̀̾̓̈́̊̅͂̒́̓̋V̶̟̬̻͛̎̍̽̐͝O̷͓̗͈̭̩͈͔͓͓̒͗̏̎̀̒̀̀͝Ȉ̵̛̖̣̻͔͎͉͊̈́͒̍̚D̷̨̛̜͍̝̯͕͗̊̊̋̚ͅ ̴̢̨͖̬̩̒̆̓̅̓̋̇Ṡ̴̛̬͙͇̍́̒̿̐͊̋̃͠͝A̴̛̲͓̪͉͖̭̫Y̵̠̤̣̦̹̍́Ŝ̴̢̪̲̩̱͇̈̆ ̴̢̧̧̭͎̟̥̼̄̾͛͒́͒͝Ĥ̴̢͕̱̽̓̿͊̒͒̏È̶͎̦L̶͈̪͇̜̬̇̈́͘L̸̯̗̱̅Ö̵̩̬́͜͝ </h1>';
+                echo '<h1 class="display-4">THE VOID SAYS HELLO, AND ENJOY YOUR STAY!</h1>';
             }
         ?>
     </div>
