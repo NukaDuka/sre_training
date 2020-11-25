@@ -25,7 +25,7 @@
             <form action="ext_form_result.php" method="post" autocomplete="off">
                 <div class="form-group">
                     <label for="input">Enter message:</label>
-                    <input type="text" name="input" id="input" placehold="input" autofocus class="form-control">
+                    <input type="text" name="input" id="input" placehold="input" autofocus class="form-control" minlength="1">
                 </div>
                 <div class="form-group">
                     <input type="submit" name="submit" value="Send a message to the void" class="btn btn-primary">
