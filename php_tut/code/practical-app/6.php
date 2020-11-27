@@ -18,6 +18,7 @@
 		<input type="submit" value="sub">
 	</form>
 	<?php
+		print_r($_POST);
 		if (isset($_POST['sub'])) {
 			echo $_POST['sub'];
 		}
