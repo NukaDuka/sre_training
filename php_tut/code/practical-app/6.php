@@ -13,7 +13,7 @@
 
 <article class="main-content col-xs-8">
 
-	<form action="6.php" method="post">
+	<form action="6.php" method="post" autocomplete="off">
 		<input type="text" name="inp" id="inp">
 		<input type="submit" value="sub">
 	</form>
