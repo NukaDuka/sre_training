@@ -5,24 +5,23 @@
 	<section class="content">
 
 		<aside class="col-xs-4">
-		
+
 		<?php Navigation();?>
-			
+
 		</aside><!--SIDEBAR-->
 
 
 <article class="main-content col-xs-8">
- 
 
-	<?php  
-
-/*  Step1: Make a form that submits one value to POST super global
-
-
- */
-
-	
-?>
+	<form action="6.php" method="post">
+		<input type="text" name="inp" id="inp">
+		<input type="submit" value="sub">
+	</form>
+	<?php
+		if (isset($_POST['sub'])) {
+			echo $POST['sub'];
+		}
+	?>
 
 
 </article><!--MAIN CONTENT-->
