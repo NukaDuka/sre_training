@@ -19,7 +19,7 @@
 	</form>
 	<?php
 		if (isset($_POST['sub'])) {
-			echo $POST['sub'];
+			echo $_POST['sub'];
 		}
 	?>
 
