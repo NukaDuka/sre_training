@@ -94,7 +94,7 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Enter new employee details</h1>
+                <h1>Retrieve employee details</h1>
                 <hr>
                 <form action="#" method="post" autocomplete="off">
                     <div class="form-group row">
