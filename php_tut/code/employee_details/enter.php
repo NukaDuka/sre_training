@@ -96,7 +96,7 @@
             <div class="col-sm-8 text-left">
                 <h1>Retrieve existing employee details</h1>
                 <hr>
-                <form action="#" method="post" autocomplete="off">
+                <form action="#" method="post" autocomplete="off" class="form-inline">
                     <div class="form-group">
                         <label for="empID">Employee ID</label>
                         <input type="text" id="empID" placeholder="1234" class="form-control" autofocus>
