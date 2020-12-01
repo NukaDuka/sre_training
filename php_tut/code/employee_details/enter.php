@@ -97,19 +97,23 @@
                 <h1>Retrieve existing employee details</h1>
                 <hr>
                 <form action="#" method="post" autocomplete="off">
-                    <div class="form-group form-inline">
-                        <label for="empID">Employee ID</label>
-                        <input type="text" id="empID" placeholder="1234" class="form-control" autofocus>
+                    <div class="form-group row">
+                        <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
+                        <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
                     </div>
-                    <div class="form-group form-inline">
-                        <label for="empName">Employee Name</label>
-                        <input type="text" id="empName" placeholder="John Smith" class="form-control">
+                    <div class="form-group row">
+                        <label for="empName" class="col-sm-2 col-form-label">Employee Name: </label>
+                        <div class="col-sm-10"><input type="text" id="empName" placeholder="John Smith" class="form-control"></div>
                     </div>
-                    <div class="form-group form-inline">
-                        <label for="empPos">Position</label>
-                        <input type="text" id="empPos" placeholder="Marketing" class="form-control">
+                    <div class="form-group row">
+                        <label for="empPos" class="col-sm-2 col-form-label">Position: </label>
+                        <div class="col-sm-10"><input type="text" id="empPos" placeholder="Marketing" class="form-control"></div>
                     </div>
-                    <button type="submit" class="btn btn-light">Submit</button>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-light">Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="col-sm-2 sidenav">
