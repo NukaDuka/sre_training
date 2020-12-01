@@ -97,11 +97,17 @@
                 <h1>Enter new employee details</h1>
                 <hr>
                 <form action="#" method="post" autocomplete="off">
-                    <div class="form-group">
-                        <label for="empID">Employee ID</label>
-                        <input type="text" id="empID" placeholder="1234" class="form-control" autofocus>
+                    <div class="form-group row">
+                        <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
+                        <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
                     </div>
-                    <button type="submit" class="btn btn-light">Submit</button>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <button type="submit" class="btn btn-dark" id="submit">Submit</button>
+                            <button type="button" class="btn btn-dark" id="reset">Clear</button>
+                            <button type="button" class="btn btn-dark" id="all">Show all employees</button>
+                        </div>
+                    </div>
                 </form>
             </div>
             <div class="col-sm-2 sidenav">
