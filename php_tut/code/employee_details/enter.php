@@ -111,7 +111,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-light">Submit</button>
+                            <button type="submit" class="btn btn-dark">Submit</button>
                         </div>
                     </div>
                 </form>
