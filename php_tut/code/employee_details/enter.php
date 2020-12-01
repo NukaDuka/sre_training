@@ -96,16 +96,16 @@
             <div class="col-sm-8 text-left">
                 <h1>Retrieve existing employee details</h1>
                 <hr>
-                <form action="#" method="post" autocomplete="off" class="form-inline">
-                    <div class="form-group">
+                <form action="#" method="post" autocomplete="off">
+                    <div class="form-group form-inline">
                         <label for="empID">Employee ID</label>
                         <input type="text" id="empID" placeholder="1234" class="form-control" autofocus>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-inline">
                         <label for="empName">Employee Name</label>
                         <input type="text" id="empName" placeholder="John Smith" class="form-control">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group form-inline">
                         <label for="empPos">Position</label>
                         <input type="text" id="empPos" placeholder="Marketing" class="form-control">
                     </div>
