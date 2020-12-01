@@ -48,7 +48,7 @@
     <link href="../bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
     <script href="../bootstrap/js/bootstrap.js" rel="stylesheet"></script>
     <script href="../bootstrap/js/jquery.js" rel="stylesheet"></script>
-    <title>Employee details homepage</title>
+    <title>Fetch employee details</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
@@ -60,13 +60,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-item nav-link active" href="index.html">Home</a></li>
+                    <a class="nav-item nav-link" href="index.html">Home</a></li>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item nav-link" href="enter.php">Enter details</a></li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="get.php">Get details</a></li>
+                    <a class="nav-item nav-link active" href="get.php">Get details</a></li>
                 </li>
             </ul>
         </div>
@@ -94,15 +94,13 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Your new administrative space</h1>
-                <p>Using our revolutionary new proprietary database entry technology, updating your employee details has never been easier!</p>
-                <hr>
-                <h3>Sitemap</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="index.html">Home</a></li>
-                    <li class="list-group-item"><a href="enter.php">Enter details</a></li>
-                    <li class="list-group-item"><a href="get.php">Get details</a></li>
-                </ul>
+                <form action="#" method="post" autocomplete="off">
+                    <div class="form-group">
+                        <label for="empID">Employee ID</label>
+                        <input type="text" id="empID" placeholder="1234" class="form-control" autofocus>
+                    </div>
+                    <button type="submit" class="btn btn-light">Submit</button>
+                </form>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
