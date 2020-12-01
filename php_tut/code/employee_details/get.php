@@ -104,8 +104,8 @@
                     <div class="form-group row">
                         <div class="col-sm-10">
                             <button type="submit" class="btn btn-dark" id="submit">Submit</button>
-                            <button type="button" class="btn btn-dark" id="reset">Clear</button>
-                            <button type="button" class="btn btn-dark" id="all">Show all employees</button>
+                            <button type="submit" class="btn btn-dark" id="reset">Clear</button>
+                            <button type="submit" class="btn btn-dark" id="all">Show all employees</button>
                         </div>
                     </div>
                 </form>
