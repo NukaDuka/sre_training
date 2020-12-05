@@ -110,19 +110,19 @@
                 <form action="enter.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
+                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>
                     </div>
                     <div class="form-group row">
                         <label for="empName" class="col-sm-2 col-form-label">Employee Name: </label>
-                        <div class="col-sm-10"><input type="text" id="empName" placeholder="John Smith" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="empName" name="empName" placeholder="John Smith" class="form-control"></div>
                     </div>
                     <div class="form-group row">
                         <label for="empPos" class="col-sm-2 col-form-label">Position: </label>
-                        <div class="col-sm-10"><input type="text" id="empPos" placeholder="Marketing" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="empPos" name="empPos" placeholder="Marketing" class="form-control"></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input type="submit" class="btn btn-dark">
+                            <input type="submit" name="submit" class="btn btn-dark">
                         </div>
                     </div>
                 </form>

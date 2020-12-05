@@ -110,13 +110,13 @@ echo $id;
                 <form action="get.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
+                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input type="submit" class="btn btn-dark" id="submit" value="Submit">
-                            <input type="button" class="btn btn-dark" id="reset" value="Reset">
-                            <input type="button" class="btn btn-dark" id="all" value="Show all employees">
+                            <input type="submit" class="btn btn-dark" id="submit" name="submit" value="Submit">
+                            <input type="button" class="btn btn-dark" id="reset" name="reset" value="Reset">
+                            <input type="button" class="btn btn-dark" id="all" name="all" value="Show all employees">
                         </div>
                     </div>
                 </form>
