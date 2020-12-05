@@ -103,7 +103,7 @@
             <div class="col-sm-8 text-left">
                 <h1>Retrieve employee details</h1>
                 <hr>
-                <form action="#" method="post" autocomplete="off">
+                <form action="get.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
                         <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
