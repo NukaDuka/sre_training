@@ -1,6 +1,8 @@
 FROM phpmyadmin/phpmyadmin:5.0.3
 
 COPY ./sources.list /etc/apt/sources.list
+COPY ./apache2.conf /etc/apache2/apache2.conf
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 
 ENV TERM=xterm-256color
 ARG DEBIAN_FRONTEND=noninteractive
@@ -19,8 +21,11 @@ RUN chown -R nobody:nogroup /tmp && cd /tmp && apt-get update && apt-get install
     curl -o webalizer_2.23.08-3.1_amd64.deb -s  http://ftp.debian.org/debian/pool/main/w/webalizer/webalizer_2.23.08-3.1_amd64.deb && dpkg -i webalizer_2.23.08-3.1_amd64.deb &&\
     apt-get install -y apache2-dev freetds-bin freetds-common freetds-dev gettext\
     gettext-base libc-client2007e libc-client2007e-dev ldap-utils libldap-2.4-2 libldap-common libldap2-dev slapd mcrypt libmhash-dev libmhash2 libxslt1-dev libxslt1.1 xsltproc libapache2-mod-apreq2 \
-    libapreq2-3 libapreq2-dev libapache2-request-perl icu-devtools libicu-dev libicu67 libapr1 libapr1-dbg libapr1-dev libaprutil1 libaprutil1-dbd-mysql libaprutil1-dbd-sqlite3 libaprutil1-dev libaprutil1-ldap && \
+    libapreq2-3 libapreq2-dev libapache2-request-perl icu-devtools libicu-dev libicu67 libapr1 libapr1-dev libaprutil1 libaprutil1-dbd-mysql libaprutil1-dbd-sqlite3 libaprutil1-dev libaprutil1-ldap && \
     echo deb http://deb.debian.org/debian experimental main >> /etc/apt/sources.list && apt-get update && apt-get -t experimental install -y perl libperl-dev libperl5.32 && \
-    apt-get install -y proftpd-basic proftpd-mod*
+    apt-get install -y proftpd-basic proftpd-mod*   
 
-RUN cpan -i CPAN::DistnameInfo Bundle::Apache2 && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp
+RUN cpan -i CPAN::DistnameInfo Bundle::Apache2 && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp && mkdir /var/www/html/php_tut && chmod 755 /var/www/html/php_tut
+
+ENTRYPOINT [ "/docker-entrypoint.sh" ]
+CMD ["apache2-foreground"]
