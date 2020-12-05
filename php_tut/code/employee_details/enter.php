@@ -53,12 +53,11 @@
 <body>
     <?php 
 
-    print_r($_POST);
     $id = $_POST['empID'];
     $name = $_POST['empName'];
     $pos = $_POST['empPos'];
-    echo $id . ' ' . $name . ' ' . $pos;
     
+
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="index.html">Employee details page</a>
@@ -125,6 +124,11 @@
                         </div>
                     </div>
                 </form>
+                <br>
+                <?php 
+                print_r($_POST);
+                echo $id . ' ' . $name . ' ' . $pos;
+                ?>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">

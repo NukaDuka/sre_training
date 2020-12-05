@@ -54,9 +54,7 @@
 
     <?php 
     
-    print_r($_POST);
-    $id = $_POST['empID'];
-    echo $id;   
+    $id = $_POST['empID'];  
     
     ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
@@ -118,6 +116,11 @@
                         </div>
                     </div>
                 </form>
+                <br>
+                <?php 
+                print_r($_POST);
+                echo $id; 
+                ?>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
