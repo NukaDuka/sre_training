@@ -60,13 +60,13 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-item" href="index.html">Home</a></li>
+                    <a class="nav-link" href="index.html">Home</a></li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item" href="enter.php">Enter details</a></li>
+                    <a class="nav-link" href="enter.php">Enter details</a></li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item" href="get.php">Get details</a></li>
+                    <a class="nav-link" href="get.php">Get details</a></li>
                 </li>
             </ul>
         </div>
