@@ -1,3 +1,11 @@
+<?php 
+
+$id = $_POST['empID'];
+$name = $_POST['empName'];
+$pos = $_POST['empPos'];
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,14 +59,7 @@
     <title>Enter employee details</title>
 </head>
 <body>
-    <?php 
-
-    $id = $_POST['empID'];
-    $name = $_POST['empName'];
-    $pos = $_POST['empPos'];
     
-
-    ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="index.html">Employee details page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
