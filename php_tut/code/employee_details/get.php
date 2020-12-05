@@ -114,9 +114,9 @@ echo $id;
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-dark" id="submit">Submit</button>
-                            <button type="button" class="btn btn-dark" id="reset">Clear</button>
-                            <button type="button" class="btn btn-dark" id="all">Show all employees</button>
+                            <input type="submit" class="btn btn-dark" id="submit" value="Submit">
+                            <input type="button" class="btn btn-dark" id="reset" value="Reset">
+                            <input type="button" class="btn btn-dark" id="all" value="Show all employees">
                         </div>
                     </div>
                 </form>
