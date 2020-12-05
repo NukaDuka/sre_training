@@ -51,6 +51,13 @@
     <title>Fetch employee details</title>
 </head>
 <body>
+
+    <?php 
+    
+    $id = $_POST['empID'];
+    echo $id;   
+    
+    ?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="index.html">Employee details page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,7 +102,7 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Enter new employee details</h1>
+                <h1>Retrieve employee details</h1>
                 <hr>
                 <form action="#" method="post" autocomplete="off">
                     <div class="form-group row">
