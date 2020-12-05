@@ -1,8 +1,7 @@
 <?php 
     
 $id = $_POST['empID'];  
-print_r($_POST);
-echo $id; 
+
 ?>
 
 <!DOCTYPE html>

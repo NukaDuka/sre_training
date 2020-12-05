@@ -3,8 +3,7 @@
     $id = $_POST['empID'];
     $name = $_POST['empName'];
     $pos = $_POST['empPos'];
-    print_r($_POST);
-    echo $id . ' ' . $name . ' ' . $pos;
+    
 ?>
 
 <!DOCTYPE html>
