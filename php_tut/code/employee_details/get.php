@@ -1,7 +1,8 @@
 <?php 
     
 $id = $_POST['empID'];  
-    
+print_r($_POST);
+echo $id; 
 ?>
 
 <!DOCTYPE html>
@@ -120,10 +121,6 @@ $id = $_POST['empID'];
                     </div>
                 </form>
                 <br>
-                <?php 
-                print_r($_POST);
-                echo $id; 
-                ?>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">

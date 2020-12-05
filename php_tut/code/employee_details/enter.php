@@ -1,9 +1,10 @@
 <?php 
 
-$id = $_POST['empID'];
-$name = $_POST['empName'];
-$pos = $_POST['empPos'];
-    
+    $id = $_POST['empID'];
+    $name = $_POST['empName'];
+    $pos = $_POST['empPos'];
+    print_r($_POST);
+    echo $id . ' ' . $name . ' ' . $pos;
 ?>
 
 <!DOCTYPE html>
@@ -126,10 +127,6 @@ $pos = $_POST['empPos'];
                     </div>
                 </form>
                 <br>
-                <?php 
-                print_r($_POST);
-                echo $id . ' ' . $name . ' ' . $pos;
-                ?>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
