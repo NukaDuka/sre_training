@@ -1,8 +1,8 @@
 <?php 
 
-    $id = $_POST['empID'];
-    $name = $_POST['empName'];
-    $pos = $_POST['empPos'];
+    $id = trim($_POST['empID']);
+    $name = trim($_POST['empName']);
+    $pos = trim($_POST['empPos']);
     
 ?>
 

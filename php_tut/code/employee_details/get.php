@@ -1,6 +1,6 @@
 <?php 
     
-$id = $_POST['empID'];  
+$id = trim($_POST['empID']);  
 
 ?>
 
