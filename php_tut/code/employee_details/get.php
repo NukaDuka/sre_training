@@ -1,7 +1,8 @@
 <?php
-
-$id = trim($_POST['empID']);
-
+if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
+    $id = trim($_POST['empID']);
+    //$con = mysqli_connect()
+}
 ?>
 
 <!DOCTYPE html>
