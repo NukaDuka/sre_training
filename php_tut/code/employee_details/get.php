@@ -6,7 +6,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
         echo "we in";
     }
     else {
-        echo mysqli_connect_error();
+        echo "Error: " . mysqli_connect_error();
     }
 }
 ?>
