@@ -1,7 +1,13 @@
 <?php
 if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
     $id = trim($_POST['empID']);
-    //$con = mysqli_connect()
+    $con = mysqli_connect("homebrew-xampp_xampp.1.n289drjqnhg8staopr4b7mim1", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+    if ($con) {
+        echo "we in";
+    }
+    else {
+        echo mysqli_connect_error();
+    }
 }
 ?>
 
