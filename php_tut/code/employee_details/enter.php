@@ -1,3 +1,11 @@
+<?php 
+
+    $id = trim($_POST['empID']);
+    $name = trim($_POST['empName']);
+    $pos = trim($_POST['empPos']);
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,15 +52,16 @@
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="../bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
-    <script href="../bootstrap/js/bootstrap.js" rel="stylesheet"></script>
-    <script href="../bootstrap/js/jquery.js" rel="stylesheet"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <title>Enter employee details</title>
 </head>
 <body>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-        <a class="nav-item navbar-brand" href="index.html">Employee details page</a>
+        <a class="navbar-brand" href="index.html">Employee details page</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -60,17 +69,18 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-item nav-link" href="index.html">Home</a></li>
+                    <a class="nav-link" href="index.html">Home</a></li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link active" href="enter.php">Enter details</a></li>
+                    <a class="nav-link" href="enter.php">Enter details</a></li>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="get.php">Get details</a></li>
+                    <a class="nav-link" href="get.php">Get details</a></li>
                 </li>
             </ul>
         </div>
     </nav>
+    <br>
     <div class="container-fluid text-center">
         <div class="row content">
             <div class="col-sm-2 sidenav">
@@ -94,27 +104,28 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Retrieve existing employee details</h1>
+                <h1>Enter employee details</h1>
                 <hr>
-                <form action="#" method="post" autocomplete="off">
+                <form action="enter.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <div class="col-sm-10"><input type="text" id="empID" placeholder="1234" class="form-control" autofocus></div>
+                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus required></div>
                     </div>
                     <div class="form-group row">
                         <label for="empName" class="col-sm-2 col-form-label">Employee Name: </label>
-                        <div class="col-sm-10"><input type="text" id="empName" placeholder="John Smith" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="empName" name="empName" placeholder="John Smith" class="form-control" required></div>
                     </div>
                     <div class="form-group row">
                         <label for="empPos" class="col-sm-2 col-form-label">Position: </label>
-                        <div class="col-sm-10"><input type="text" id="empPos" placeholder="Marketing" class="form-control"></div>
+                        <div class="col-sm-10"><input type="text" id="empPos" name="empPos" placeholder="Marketing" class="form-control" required></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn btn-dark">Submit</button>
+                            <input type="submit" name="submit" class="btn btn-dark">
                         </div>
                     </div>
                 </form>
+                <br>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">

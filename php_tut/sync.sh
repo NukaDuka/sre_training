@@ -1,3 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 # Intended to be run from within the code folder
-sudo cp -R /mnt/c/Users/kartik.go/Desktop/Projects/sre_training/php_tut/code /var/lib/docker/volumes/xampp-pma-volume/_data/
+set -ex
+docker run -d --rm --name dummy -v xampp-pma-volume:/root alpine tail -f /dev/null
+docker cp ./code dummy:/root/
+docker stop dummy

@@ -2,7 +2,7 @@
 
 docker stack rm homebrew-xampp
 echo 'Waiting for stack to shut down'
-sleep 30s
+sleep 5s
 
 sudo docker network rm xampp-network
 sudo docker network create --attachable -d overlay xampp-network
