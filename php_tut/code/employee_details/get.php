@@ -1,5 +1,5 @@
 <?php
-echo "yo";
+echo "test";
 if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
     $id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
