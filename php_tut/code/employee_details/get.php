@@ -1,10 +1,20 @@
 <?php
-echo "test";
 if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
     $id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
-        echo "we in";
+        if (isset($_POST['submit'])) {
+
+            $query = mysqli_prepare($con, "select * from employees where id = ?");
+            mysqli_stmt_bind_param($query, $id);
+            mysqli_stmt_execute($query);
+            mysqli_stmt_bind_result($query, $result);
+            mysqli_stmt_fetch($query);
+            printf("%s", $result);
+            mysqli_stmt_close($query);
+        }
+        mysqli_close($con);
+
     }
     else {
         echo "Error: " . mysqli_connect_error();
