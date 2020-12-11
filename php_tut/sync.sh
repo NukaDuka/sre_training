@@ -1,4 +1,5 @@
 #!/bin/bash
+
 set -ex
 echo $PWD
 docker run -d --rm --name dummy -v xampp-pma-volume:/root alpine tail -f /dev/null
