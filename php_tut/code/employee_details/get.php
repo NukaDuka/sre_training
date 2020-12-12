@@ -2,7 +2,7 @@
 $success = true;
 $start_time = microtime(true);
 $blank = false;
-if ($_POST['id'] == "") $blank = true;
+if ($_POST['empID'] == "") $blank = true;
 echo $blank;
 if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
     $id = trim($_POST['empID']);
