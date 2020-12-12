@@ -127,7 +127,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
             <div class="col-sm-8 text-left">
                 <?php 
                 if ($success) {
-                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Query successfully executed</strong></div>';
+                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query successfully executed</div>';
                 }
                 ?>
                 <h1>Retrieve employee details</h1>
