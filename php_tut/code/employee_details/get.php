@@ -151,7 +151,7 @@ $elapsed_time = microtime(true) - $start_time;
                 if ($success && ((!$blank && isset($_POST['submit'])) || isset($_POST['all']))) {
                     echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
                 }
-                else if (!$blank && isset($_POST['submit'])) {
+                else if ($blank && isset($_POST['submit'])) {
                     echo '<div class="alert alert-warning alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error:</strong> <em>Employee ID</em> cannot be blank</div>';
                 }
                 ?>
