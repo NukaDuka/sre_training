@@ -171,7 +171,7 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <hr>
                 <?php 
-                if (!$blank && (isset($_POST['submit']) || isset($_POST['all']))) {
+                if ((!$blank && isset($_POST['submit'])) || isset($_POST['all'])) {
                     echo "<h4>Result:</h4><br>";
                     if (count($id) == 0)
                     {
