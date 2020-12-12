@@ -8,12 +8,12 @@ $name = [];
 $pos = [];
 if ($_POST['empID'] == "") $blank = true;
 if ((!$blank && isset($_POST['submit'])) || isset($_POST['reset']) || isset($_POST['all'])) {
-    $_id = trim($_POST['empID']);
+    $form_id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
         if (isset($_POST['submit'])) {
             $query = mysqli_prepare($con, "select * from employees where id = ?");
-            mysqli_stmt_bind_param($query, 's', $_id);
+            mysqli_stmt_bind_param($query, 's', $form_id);
             if (!mysqli_stmt_execute($query)) {
                 $success = false;  
             }
@@ -149,7 +149,8 @@ $elapsed_time = microtime(true) - $start_time;
             <div class="col-sm-8 text-left">
                 <?php 
                 if ($success && ((!$blank && isset($_POST['submit'])) || isset($_POST['all']))) {
-                    echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
+                    if (count($id) != 0) echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
+                    else echo '<div class="alert alert-danger alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error: </strong> Employee ID ' . $form_id . ' does not exist.</div>';
                 }
                 ?>
                 <h1>Retrieve employee details</h1>
@@ -173,15 +174,15 @@ $elapsed_time = microtime(true) - $start_time;
                     </div>
                 </form>
                 <br>
-                <hr>
                 <?php 
                 if ((!$blank && isset($_POST['submit'])) || isset($_POST['all'])) {
-                    echo "<h4>Result:</h4><br>";
+                    
                     if (count($id) == 0)
                     {
                         echo "Empty set<br>";
                     }
                     else {
+                        echo "<hr><h4>Result:</h4><br>";
                         echo '<table class="table table-bordered table-hover">';
                         echo '<thead class="thead-light">';
                         echo '<tr>';
