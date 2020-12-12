@@ -12,7 +12,6 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
         if (isset($_POST['submit'])) {
-            
             $query = mysqli_prepare($con, "select * from employees where id = ?");
             mysqli_stmt_bind_param($query, 's', $_id);
             if (!mysqli_stmt_execute($query)) {
@@ -26,6 +25,20 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
             }
             mysqli_stmt_close($query);
         }   
+        else if (isset($_POST['all'])) {
+            $query = mysqli_prepare($con, "select * from employees");
+            mysqli_stmt_bind_param($query, 's', $_id);
+            if (!mysqli_stmt_execute($query)) {
+                $success = false;  
+            }
+            mysqli_stmt_bind_result($query, $_id, $_name, $_pos);
+            while (mysqli_stmt_fetch($query)) {
+                array_push($id, $_id);
+                array_push($name, $_name);
+                array_push($pos, $_pos);
+            }
+            mysqli_stmt_close($query);
+        }
     }
     else {
         echo "Error: " . mysqli_connect_error();
