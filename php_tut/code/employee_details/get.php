@@ -26,14 +26,12 @@ if ((!$blank && isset($_POST['submit'])) || isset($_POST['reset']) || isset($_PO
             mysqli_stmt_close($query);
         }   
         else if (isset($_POST['all'])) {
-            echo 'all';
             $query = mysqli_prepare($con, "select * from employees");
             if (!mysqli_stmt_execute($query)) {
                 $success = false;  
             }
             mysqli_stmt_bind_result($query, $_id, $_name, $_pos);
             while (mysqli_stmt_fetch($query)) {
-                echo $_id;
                 array_push($id, $_id);
                 array_push($name, $_name);
                 array_push($pos, $_pos);
