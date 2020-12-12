@@ -1,4 +1,5 @@
 <?php
+$query = null;A
 $success = true;
 $start_time = microtime(true);
 $blank = false;
