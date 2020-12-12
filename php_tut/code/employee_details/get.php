@@ -125,6 +125,11 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                 </div>
             </div>
             <div class="col-sm-8 text-left">
+                <?php 
+                if ($success) {
+                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed</div>';
+                }
+                ?>
                 <h1>Retrieve employee details</h1>
                 <hr>
                 <form action="get.php" method="post" autocomplete="off">
@@ -137,11 +142,6 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                             <input type="submit" class="btn btn-dark" id="submit" name="submit" value="Submit">
                             <input type="submit" class="btn btn-dark" id="reset" name="reset" value="Reset">
                             <input type="submit" class="btn btn-dark" id="all" name="all" value="Show all employees">
-                            <?php 
-                            if ($success) {
-                                echo '<div class="row"><div class="alert alert-success col-md-4 col-md-offset-4" role="alert">Success!</div></div>';
-                            }
-                            ?>
                         </div>
                     </div>
                 </form>
