@@ -129,7 +129,7 @@ $elapsed_time = microtime(true) - $start_time;
             <div class="col-sm-8 text-left">
                 <?php 
                 if ($success) {
-                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . $elapsed_time . ')</div>';
+                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
                 }
                 ?>
                 <h1>Retrieve employee details</h1>
