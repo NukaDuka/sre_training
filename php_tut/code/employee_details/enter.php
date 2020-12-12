@@ -3,7 +3,24 @@
     $id = trim($_POST['empID']);
     $name = trim($_POST['empName']);
     $pos = trim($_POST['empPos']);
-    
+    $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+    if ($con) {
+        if (isset($_POST['submit'])) {
+            $query = mysqli_prepare($con, "insert into employees values (?, ?, ?)");
+            mysqli_stmt_bind_param($query, 'sss', $id, $name, $pos);
+            if (!mysqli_stmt_execute($query)) {
+                $success = false;  
+            }
+            mysqli_stmt_close($query);
+        }   
+    }
+    else {
+        echo "Error: " . mysqli_connect_error();
+    }
+    mysqli_close($con);
+    $header_str = "Location: /get.php?redirect=true&empID=" . $id;
+    header($header_str); 
+    exit();
 ?>
 
 <!DOCTYPE html>
