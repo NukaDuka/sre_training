@@ -66,6 +66,7 @@ if (isset($_GET['redirect'])) {
     }
     mysqli_close($con);
     $blank = false;
+    $_POST['submit'] = true;
 }
 $elapsed_time = microtime(true) - $start_time;
 ?>
