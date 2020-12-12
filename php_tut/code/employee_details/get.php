@@ -145,7 +145,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                 <?php 
                 if (isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
-                    if ($name == "" || $pos == "") echo "Empty set<br>"
+                    if ($name == "" || $pos == "") echo "Empty set<br>";
                     echo $id . ' ' . $name . ' ' . $pos;
                 }
                 ?>
