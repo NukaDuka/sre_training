@@ -106,11 +106,6 @@ $elapsed_time = microtime(true) - $start_time;
         </div>
     </nav>
     <br>
-    <?php 
-    if (!$blank && $success && (isset($_POST['submit']) || isset($_POST['all']))) {
-        echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
-    }
-    ?>
     <div class="container-fluid text-center">
         <div class="row content">
             <div class="col-sm-2 sidenav">
@@ -134,6 +129,11 @@ $elapsed_time = microtime(true) - $start_time;
                 </div>
             </div>
             <div class="col-sm-8 text-left">
+                <?php 
+                if (!$blank && $success && (isset($_POST['submit']) || isset($_POST['all']))) {
+                    echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
+                }
+                ?>
                 <h1>Retrieve employee details</h1>
                 <hr>
                 <form action="get.php" method="post" autocomplete="off">
