@@ -1,8 +1,9 @@
 <?php
 $success = true;
 $start_time = microtime(true);
-if ($_POST['id'] == "") exit();
-if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
+$blank = false;
+if ($_POST['id'] == "") $blank = true
+if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
     $id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
@@ -129,7 +130,7 @@ $elapsed_time = microtime(true) - $start_time;
             </div>
             <div class="col-sm-8 text-left">
                 <?php 
-                if ($success && (isset($_POST['submit']) || isset($_POST['all']))) {
+                if (!$blank && $success && (isset($_POST['submit']) || isset($_POST['all']))) {
                     echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
                 }
                 ?>
@@ -151,7 +152,7 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <hr>
                 <?php 
-                if (isset($_POST['submit'])) {
+                if (!$blank && isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
                     if ($name == "" || $pos == "")
                     {
