@@ -149,7 +149,7 @@ $elapsed_time = microtime(true) - $start_time;
                 <hr>
                 <?php 
                 echo $blank . $id . $name . $pos;
-                echo mysqli_num_rows($query);
+                echo mysqli_stmt_num_rows($query);
                 if (!$blank && isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
                     if ($name == "" || $pos == "")
