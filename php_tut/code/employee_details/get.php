@@ -1,7 +1,7 @@
 <?php
 $query = null;
 $success = true;
-$start_time = microtime(true);
+$start_time =  microtime(true);
 $blank = false;
 if ($_POST['empID'] == "") $blank = true;
 if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
@@ -17,7 +17,7 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
             }
             mysqli_stmt_bind_result($query, $id, $name, $pos);
             //printf("%s %s %s", $id, $name, $pos);
-        }        
+        }   echo mysqli_stmt_num_rows($query);
     }
     else {
         echo "Error: " . mysqli_connect_error();
@@ -149,8 +149,6 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <hr>
                 <?php 
-                echo $blank . $id . $name . $pos;
-                echo mysqli_stmt_num_rows($query);
                 if (!$blank && isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
                     if ($name == "" || $pos == "")
