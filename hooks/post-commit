@@ -1,3 +1,4 @@
+# Post-commit git hook
 cd ../../php_tut
 sh ./sync.sh
 echo "Exit code: $?"
