@@ -64,6 +64,7 @@ if (isset($_GET['redirect'])) {
         echo "Error: " . mysqli_connect_error();
     }
     mysqli_close($con);
+    $blank = false;
 }
 $elapsed_time = microtime(true) - $start_time;
 ?>
