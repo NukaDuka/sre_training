@@ -8,9 +8,9 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
             $query = mysqli_prepare($con, "select * from employees where id = ?");
             mysqli_stmt_bind_param($query, 's', $id);
             mysqli_stmt_execute($query);
-            mysqli_stmt_bind_result($query, $result);
+            mysqli_stmt_bind_result($query, $id, $name, $pos);
             mysqli_stmt_fetch($query);
-            printf("%s", $result);
+            printf("%s %s %s", $id, $name, $pos);
             mysqli_stmt_close($query);
         }
         mysqli_close($con);
