@@ -168,11 +168,12 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '<table class="table table-bordered table-striped table-hover">';
                         echo '<thead class="thead-light>';
                         echo '<tr>';
-                        echo '<th scope="col">Sr. No.</th>';
-                        echo '<th scope="col">Employee ID</th>';
-                        echo '<th scope="col">Name</th>';
-                        echo '<th scope="col">Position</th>';
-                        echo '</tr></thead>';
+                        echo '<th scope="col">#</th>';
+                        echo '<th scope="col">First</th>'
+                        echo '<th scope="col">Last</th>';
+                        echo '<th scope="col">Handle</th>';
+                        echo '</tr>';
+                        echo '</thead>';
                         echo '<tbody>';
                         $count = 1;
                         for (; $count <= count($id); $count++) {
