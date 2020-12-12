@@ -158,12 +158,9 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <hr>
                 <?php 
-                print_r($id);
-                print_r($name);
-                print_r($pos);
-                if (!$blank && isset($_POST['submit'])) {
+                if (!$blank && (isset($_POST['submit']) || isset($_POST['all']))) {
                     echo "<h4>Result:</h4><br>";
-                    if ($name == "" || $pos == "")
+                    if (count($id) == 0)
                     {
                         echo "Empty set<br>";
                     }
@@ -178,12 +175,12 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '</tr></thead>';
                         echo '<tbody>';
                         $count = 1;
-                        while (mysqli_stmt_fetch($query)) {
+                        for (; $count <= count($id); $count++) {
                             echo "<tr>";
                             echo '<th scope="row">' . $count . '</th>';
-                            echo '<td>' . $id . '</td>';
-                            echo '<td>' . $name . '</td>';
-                            echo '<td>' . $pos . '</td>';
+                            echo '<td>' . $id[$count] . '</td>';
+                            echo '<td>' . $name[$count] . '</td>';
+                            echo '<td>' . $pos[$count] . '</td>';
                             echo '</tr>';
                         }
                         echo '</tbody>';
