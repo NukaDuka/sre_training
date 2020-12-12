@@ -168,7 +168,7 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '<table class="table table-bordered table-striped table-hover">';
                         echo '<thead class="thead-light>';
                         echo '<tr>';
-                        echo '<th scope="col">#</th>';
+                        echo '<th scope="col">Sr. No.</th>';
                         echo '<th scope="col">Employee ID</th>';
                         echo '<th scope="col">Name</th>';
                         echo '<th scope="col">Position</th>';
