@@ -3,6 +3,9 @@ $query = null;
 $success = true;
 $start_time =  microtime(true);
 $blank = false;
+$id = [];
+$name = [];
+$pos = [];
 if ($_POST['empID'] == "") $blank = true;
 if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
     $id = trim($_POST['empID']);
@@ -15,13 +18,19 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
             if (!mysqli_stmt_execute($query)) {
                 $success = false;  
             }
-            mysqli_stmt_bind_result($query, $id, $name, $pos);
-            //printf("%s %s %s", $id, $name, $pos);
-        }   echo mysqli_stmt_num_rows($query);
+            mysqli_stmt_bind_result($query, $_id, $_name, $_pos);
+            while (mysqli_stmt_fetch($query)) {
+                array_push($id, $_id);
+                array_push($name, $_name);
+                array_push($pos, $_pos);
+            }
+            mysqli_stmt_close($query);
+        }   
     }
     else {
         echo "Error: " . mysqli_connect_error();
     }
+    mysqli_close($con);
 }
 $elapsed_time = microtime(true) - $start_time;
 ?>
@@ -149,6 +158,9 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <hr>
                 <?php 
+                print_r($id);
+                print_r($name);
+                print_r($pos);
                 if (!$blank && isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
                     if ($name == "" || $pos == "")
@@ -178,10 +190,6 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '</table>';
                     }
                 }
-
-                if ($query) mysqli_stmt_close($query);
-                if ($con)  mysqli_close($con);
-
                 ?>
             </div>
             <div class="col-sm-2 sidenav">
