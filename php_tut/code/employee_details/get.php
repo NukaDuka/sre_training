@@ -1,7 +1,7 @@
 <?php
 $success = true;
 $start_time = microtime(true);
-if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
+if ($_POST['id'] != "" && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
     $id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
@@ -137,7 +137,7 @@ $elapsed_time = microtime(true) - $start_time;
                 <form action="get.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus required></div>
+                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
