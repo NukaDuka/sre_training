@@ -139,7 +139,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                             <input type="submit" class="btn btn-dark" id="all" name="all" value="Show all employees">
                             <?php 
                             if ($success) {
-                                echo '<div class="alert alert-success col-md-4 col-md-offset-4" role="alert">Success!</div>';
+                                echo '<div class="alert alert-success col-md-4 col-md-offset-4" role="alert" align="center">Success!</div>';
                             }
                             ?>
                         </div>
