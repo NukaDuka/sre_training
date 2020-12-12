@@ -15,12 +15,8 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
                 $success = false;  
             }
             mysqli_stmt_bind_result($query, $id, $name, $pos);
-            mysqli_stmt_fetch($query);
             //printf("%s %s %s", $id, $name, $pos);
-            mysqli_stmt_close($query);
-        }
-        mysqli_close($con);
-        
+        }        
     }
     else {
         echo "Error: " . mysqli_connect_error();
@@ -159,9 +155,32 @@ $elapsed_time = microtime(true) - $start_time;
                         echo "Empty set<br>";
                     }
                     else {
-                        echo $id . ' ' . $name . ' ' . $pos;
+                        echo '<table class="table table-bordered table-striped table-hover">';
+                        echo '<thead class="thead-light>';
+                        echo '<tr>';
+                        echo '<th scope="col">#</th>';
+                        echo '<th scope="col">Employee ID</th>';
+                        echo '<th scope="col">Name</th>';
+                        echo '<th scope="col">Position</th>';
+                        echo '</tr></thead>';
+                        echo '<tbody>';
+                        $count = 1;
+                        while (mysqli_stmt_fetch($query)) {
+                            echo "<tr>";
+                            echo '<th scope="row">' . $count . '</th>';
+                            echo '<td>' . $id . '</td>';
+                            echo '<td>' . $name . '</td>';
+                            echo '<td>' . $pos . '</td>';
+                            echo '</tr>'
+                        }
+                        echo '</tbody>';
+                        echo '</table>';
                     }
                 }
+
+                if ($query) mysqli_stmt_close($query);
+                if ($con)  mysqli_close($con);
+
                 ?>
             </div>
             <div class="col-sm-2 sidenav">
