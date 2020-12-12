@@ -43,6 +43,7 @@ if ((!$blank && isset($_POST['submit'])) || isset($_POST['reset']) || isset($_PO
     }
     mysqli_close($con);
 }
+print_r($_GET);
 if (isset($_GET['redirect'])) {
     $form_id = $_GET['empID'];
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
