@@ -7,7 +7,7 @@ $id = [];
 $name = [];
 $pos = [];
 if ($_POST['empID'] == "") $blank = true;
-if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all']))) {
+if ((!$blank && isset($_POST['submit'])) || isset($_POST['reset']) || isset($_POST['all'])) {
     $_id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
