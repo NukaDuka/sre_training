@@ -175,29 +175,31 @@ $elapsed_time = microtime(true) - $start_time;
                 </form>
                 <br>
                 <?php 
-                if ((!$blank && isset($_POST['submit'])) || isset($_POST['all'])) {                   
-                    echo "<hr><h4>Result:</h4><br>";
-                    echo '<table class="table table-bordered table-hover">';
-                    echo '<thead class="thead-light">';
-                    echo '<tr>';
-                    echo '<th scope="col">No.</th>';
-                    echo '<th scope="col">Employee ID</th>';
-                    echo '<th scope="col">Name</th>';
-                    echo '<th scope="col">Position</th>';
-                    echo '</tr>';
-                    echo '</thead>';
-                    echo '<tbody>';
-                    $count = 1;
-                    for (; $count <= count($id); $count++) {
-                        echo "<tr>";
-                        echo '<th scope="row">' . $count . '</td>';
-                        echo '<td>' . $id[$count-1] . '</td>';
-                        echo '<td>' . $name[$count-1] . '</td>';
-                        echo '<td>' . $pos[$count-1] . '</td>';
+                if ((!$blank && isset($_POST['submit'])) || isset($_POST['all'])) {   
+                    if (count($id) != 0){                
+                        echo "<hr><h4>Result:</h4><br>";
+                        echo '<table class="table table-bordered table-hover">';
+                        echo '<thead class="thead-light">';
+                        echo '<tr>';
+                        echo '<th scope="col">No.</th>';
+                        echo '<th scope="col">Employee ID</th>';
+                        echo '<th scope="col">Name</th>';
+                        echo '<th scope="col">Position</th>';
                         echo '</tr>';
+                        echo '</thead>';
+                        echo '<tbody>';
+                        $count = 1;
+                        for (; $count <= count($id); $count++) {
+                            echo "<tr>";
+                            echo '<th scope="row">' . $count . '</td>';
+                            echo '<td>' . $id[$count-1] . '</td>';
+                            echo '<td>' . $name[$count-1] . '</td>';
+                            echo '<td>' . $pos[$count-1] . '</td>';
+                            echo '</tr>';
+                        }
+                        echo '</tbody>';
+                        echo '</table>';
                     }
-                    echo '</tbody>';
-                    echo '</table>';
                 }
                 ?>
                 
