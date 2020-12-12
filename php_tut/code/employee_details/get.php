@@ -178,9 +178,9 @@ $elapsed_time = microtime(true) - $start_time;
                         for (; $count <= count($id); $count++) {
                             echo "<tr>";
                             echo '<th scope="row">' . $count . '</th>';
-                            echo '<td>' . $id[$count] . '</td>';
-                            echo '<td>' . $name[$count] . '</td>';
-                            echo '<td>' . $pos[$count] . '</td>';
+                            echo '<td>' . $id[$count-1] . '</td>';
+                            echo '<td>' . $name[$count-1] . '</td>';
+                            echo '<td>' . $pos[$count-1] . '</td>';
                             echo '</tr>';
                         }
                         echo '</tbody>';
