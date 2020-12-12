@@ -6,7 +6,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
         if (isset($_POST['submit'])) {
 
             $query = mysqli_prepare($con, "select * from employees where id = ?");
-            mysqli_stmt_bind_param($query, $id);
+            mysqli_stmt_bind_param($query, 's', $id);
             mysqli_stmt_execute($query);
             mysqli_stmt_bind_result($query, $result);
             mysqli_stmt_fetch($query);
