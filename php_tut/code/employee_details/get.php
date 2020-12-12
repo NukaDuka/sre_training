@@ -159,8 +159,7 @@ $elapsed_time = microtime(true) - $start_time;
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
                         <?php 
                         if ($blank && isset($_POST['submit'])) {
-                            echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control is-invalid" autofocus></div>';
-                            echo '<div class="invalid-feedback">This field is required.</div>';
+                            echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control is-invalid" autofocus><div class="invalid-feedback">This field is required.</div></div>';
                         }
                         else echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>';
                         ?>
