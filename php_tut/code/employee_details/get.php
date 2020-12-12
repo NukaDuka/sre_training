@@ -169,7 +169,7 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '<thead class="thead-light>';
                         echo '<tr>';
                         echo '<th scope="col">#</th>';
-                        echo '<th scope="col">First</th>'
+                        echo '<th scope="col">First</th>';
                         echo '<th scope="col">Last</th>';
                         echo '<th scope="col">Handle</th>';
                         echo '</tr>';
