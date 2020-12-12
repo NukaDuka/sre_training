@@ -165,7 +165,7 @@ $elapsed_time = microtime(true) - $start_time;
                         echo "Empty set<br>";
                     }
                     else {
-                        echo '<table class="table table-bordered table-striped table-hover">';
+                        echo '<table class="table table-bordered table-hover">';
                         echo '<thead class="thead-light">';
                         echo '<tr>';
                         echo '<th scope="col">No.</th>';
@@ -178,7 +178,7 @@ $elapsed_time = microtime(true) - $start_time;
                         $count = 1;
                         for (; $count <= count($id); $count++) {
                             echo "<tr>";
-                            echo '<td>' . $count . '</td>';
+                            echo '<th scope="row">' . $count . '</td>';
                             echo '<td>' . $id[$count-1] . '</td>';
                             echo '<td>' . $name[$count-1] . '</td>';
                             echo '<td>' . $pos[$count-1] . '</td>';
