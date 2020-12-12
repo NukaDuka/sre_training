@@ -165,7 +165,7 @@ $elapsed_time = microtime(true) - $start_time;
                         echo "Empty set<br>";
                     }
                     else {
-                        echo '<table class="table table-bordered ">';
+                        echo '<table class="table">';
                         echo '<thead class="thead-light>';
                         echo '<tr>';
                         echo '<th scope="col">No.</th>';
