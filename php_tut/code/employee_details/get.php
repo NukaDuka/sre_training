@@ -14,7 +14,7 @@ if (!$blank && (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POS
         if (isset($_POST['submit'])) {
             
             $query = mysqli_prepare($con, "select * from employees where id = ?");
-            mysqli_stmt_bind_param($query, 's', $id);
+            mysqli_stmt_bind_param($query, 's', $_id);
             if (!mysqli_stmt_execute($query)) {
                 $success = false;  
             }
