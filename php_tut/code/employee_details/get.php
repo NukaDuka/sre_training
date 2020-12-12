@@ -137,6 +137,11 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                             <input type="submit" class="btn btn-dark" id="submit" name="submit" value="Submit">
                             <input type="submit" class="btn btn-dark" id="reset" name="reset" value="Reset">
                             <input type="submit" class="btn btn-dark" id="all" name="all" value="Show all employees">
+                            <?php 
+                            if ($success) {
+                                echo '<div class="alert alert-success" role="alert"><i class="fa fa-check"></i>Success!</div>'
+                            }
+                            ?>
                         </div>
                     </div>
                 </form>
@@ -145,8 +150,13 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                 <?php 
                 if (isset($_POST['submit'])) {
                     echo "<h4>Result:</h4><br>";
-                    if ($name == "" || $pos == "") echo "Empty set<br>";
-                    echo $id . ' ' . $name . ' ' . $pos;
+                    if ($name == "" || $pos == "")
+                    {
+                        echo "Empty set<br>";
+                    }
+                    else {
+                        echo $id . ' ' . $name . ' ' . $pos;
+                    }
                 }
                 ?>
             </div>
