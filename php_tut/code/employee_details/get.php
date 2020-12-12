@@ -151,16 +151,19 @@ $elapsed_time = microtime(true) - $start_time;
                 if ($success && ((!$blank && isset($_POST['submit'])) || isset($_POST['all']))) {
                     echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
                 }
-                else if ($blank && isset($_POST['submit'])) {
-                    echo '<div class="alert alert-warning alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error:</strong> <em>Employee ID</em> cannot be blank</div>';
-                }
                 ?>
                 <h1>Retrieve employee details</h1>
                 <hr>
                 <form action="get.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>
+                        <?php 
+                        if ($blank && isset($_POST['submit'])) {
+                            echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control is-invalid" autofocus></div>';
+                            echo '<div class="invalid-feedback">This field is required.</div>';
+                        }
+                        else echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="1234" class="form-control" autofocus></div>';
+                        
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
