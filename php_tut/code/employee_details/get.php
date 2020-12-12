@@ -143,7 +143,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
                 <br>
                 <hr>
                 <?php 
-                if (isset($_POST('submit'))) {
+                if (isset($_POST['submit'])) {
                     echo "<h4>Result: </h4>";
                 }
                 ?>
