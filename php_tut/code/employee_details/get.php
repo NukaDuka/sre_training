@@ -176,7 +176,7 @@ $elapsed_time = microtime(true) - $start_time;
                 <br>
                 <?php 
                 if ((!$blank && isset($_POST['submit'])) || isset($_POST['all'])) {   
-                    if (count($id) != 0){                
+                    if (count($id) != 0) {                
                         echo "<hr><h4>Result:</h4><br>";
                         echo '<table class="table table-bordered table-hover">';
                         echo '<thead class="thead-light">';
