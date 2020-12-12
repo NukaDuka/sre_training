@@ -1,5 +1,6 @@
 <?php
 $success = true;
+$start_time = microtime(true);
 if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
     $id = trim($_POST['empID']);
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
@@ -23,6 +24,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
         echo "Error: " . mysqli_connect_error();
     }
 }
+$elapsed_time = microtime(true) - $start_time;
 ?>
 
 <!DOCTYPE html>
@@ -127,7 +129,7 @@ if (isset($_POST['submit']) || isset($_POST['reset']) || isset($_POST['all'])) {
             <div class="col-sm-8 text-left">
                 <?php 
                 if ($success) {
-                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query successfully executed</div>';
+                    echo '<div class="alert alert-success alert-dismissible" role="alert"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . $elapsed_time . ')</div>';
                 }
                 ?>
                 <h1>Retrieve employee details</h1>
