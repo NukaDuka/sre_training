@@ -171,7 +171,7 @@ $elapsed_time = microtime(true) - $start_time;
                             echo '<td>' . $id . '</td>';
                             echo '<td>' . $name . '</td>';
                             echo '<td>' . $pos . '</td>';
-                            echo '</tr>'
+                            echo '</tr>';
                         }
                         echo '</tbody>';
                         echo '</table>';
