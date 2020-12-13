@@ -5,3 +5,4 @@ pythontips
 __pycache__
 jenkins-cli.jar
 jenkins
+*_backup.*
