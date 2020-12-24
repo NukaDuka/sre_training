@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php 
+
+if (!isset($_GET['empID']) && !isset(_POST['submit'])) {
+    echo "No info provided, redirecting to retrieval page";
+    $header_str = "Location: /php_tut/code/employee_details/get.php";
+    header($header_str); 
+    exit();
+}
+
+$id = $_POST['empID'];
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -92,16 +104,14 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Your new administrative space</h1>
-                <p>Using our revolutionary new proprietary database entry technology, updating your employee details has never been easier!</p>
+                <h1>Edit employee record</h1>
                 <hr>
-                <h3>Sitemap</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="index.html">Home</a></li>
-                    <li class="list-group-item"><a href="enter.php">Enter details</a></li>
-                    <li class="list-group-item"><a href="get.php">Get details</a></li>
-                </ul>
-            </div>
+                <form action="edit.php" method="post" autocomplete="off">
+                    <div class="form-group row">
+                        <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readonly="readonly"></div>'; ?>
+                    </div>
+                </form>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
                     <p>INTRUSIVE ADS</p>
