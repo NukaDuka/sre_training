@@ -218,6 +218,7 @@ $elapsed_time = microtime(true) - $start_time;
                             echo '<td>' . $id[$count-1] . '</td>';
                             echo '<td>' . $name[$count-1] . '</td>';
                             echo '<td>' . $pos[$count-1] . '</td>';
+                            echo '<td><a href="edit.php?empID=' . $id[$count-1] . '>Edit</a></td>'
                             echo '</tr>';
                         }
                         echo '</tbody>';
