@@ -120,7 +120,7 @@
                 <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
                 <h3>Are you sure you want to delete the following record?</h3>
-                <div class="container">
+                <div class="container justify-content-center">
                     <div class="row">
                         <ul class="list-group justify-content-center">
                             <li class="list-group-item">Employee ID: <?php echo $id ?></li>
@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="justify-content-center col-sm-2">
                             <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
-                            <input type="submit" class="btn btn-d   ark" id="yes" name="yes" value="Yes">
+                            <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                         </div>
                     </div>                     
                 </div>
