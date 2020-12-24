@@ -119,10 +119,10 @@
             <div class="col-sm-8">
                 <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
-                <div class="text-center">
+                <div class="col-sm-auto text-center">
                     <h3>Are you sure you want to delete the following record?</h3>
                     
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group">
                         <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                         <li class="list-group-item">Employee name: <?php echo $name ?></li>
                         <li class="list-group-item">Position: <?php echo $pos ?></li>
