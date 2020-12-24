@@ -117,8 +117,8 @@ $elapsed_time = microtime(true) - $start_time;
         }
         td a { 
             display: block; 
-            border: 1px solid black;
             padding: 16px; 
+            align: center
         }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
