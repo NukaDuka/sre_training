@@ -31,6 +31,7 @@ if (isset($_POST["submit"])) {
         redirect($redir_str);
     }
     $query_string .= " where id=?";
+    redirect(htmlspecialchars($query_string));
     $query = mysqli_prepare($con, $query_string);
     if ($_POST['empName'] != "" && $_POST['empPos'] == "") mysqli_stmt_bind_param($query, 'ss', $id, $name);
     else if ($_POST['empPos'] != "" && $_POST['empName'] == "") mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
