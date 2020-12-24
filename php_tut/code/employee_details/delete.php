@@ -121,6 +121,7 @@
                 <hr>
                 <div class="d-flex justify-content-center">
                     <h3>Are you sure you want to delete the following record?</h3>
+                    <br>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                         <li class="list-group-item">Employee name: <?php echo $name ?></li>
