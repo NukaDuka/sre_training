@@ -1,8 +1,13 @@
 <?php 
-if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
+
+function redirect() {
     $header_str = "Location: /php_tut/code/employee_details/get.php";
     header($header_str); 
     exit();
+}
+
+if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
+    redirect();
 }
 $success = true;
 $id = $_GET['empID'];
@@ -134,7 +139,8 @@ mysqli_close($con);
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input type="submit" name="submit" class="btn btn-dark">
+                            <input type="submit" class="btn btn-danger" id="cancel" name="cancel" value="Cancel">
+                            <input type="submit" name="submit" id="submit" class="btn btn-dark">
                         </div>
                     </div>
                 </form>
