@@ -116,19 +116,21 @@
                     <p>INTRUSIVE ADS</p>
                 </div>
             </div>
-            <div class="col-sm-8 text-center">
-                <h1>Delete employee record</h1>
+            <div class="col-sm-8">
+                <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
-                <h3>Are you sure you want to delete the following record?</h3>
-                
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Employee ID: <?php echo $id ?></li>
-                    <li class="list-group-item">Employee name: <?php echo $name ?></li>
-                    <li class="list-group-item">Position: <?php echo $pos ?></li>
-                </ul>
-                <div class="col-sm-auto">
-                    <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
-                    <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                <div class="text-center">
+                    <h3>Are you sure you want to delete the following record?</h3>
+                    
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Employee ID: <?php echo $id ?></li>
+                        <li class="list-group-item">Employee name: <?php echo $name ?></li>
+                        <li class="list-group-item">Position: <?php echo $pos ?></li>
+                    </ul>
+                    <div class="col-sm-auto">
+                        <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
+                        <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                    </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
