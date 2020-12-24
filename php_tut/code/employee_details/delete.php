@@ -127,11 +127,9 @@
                             <li class="list-group-item">Employee name: <?php echo $name ?></li>
                             <li class="list-group-item">Position: <?php echo $pos ?></li>
                         </ul>
-                    </div>
-
-                    <div class="d-flex justify-content-center">
-                        <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
-                        <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                        <div><input type="submit" class="btn btn-danger" id="no" name="no" value="No">
+                        <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes"></div>
+                        
                     </div>
                 </div>
             </div>
