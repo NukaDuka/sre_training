@@ -122,15 +122,15 @@ mysqli_close($con);
                 <form action="edit.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readOnly="readOnly" /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . htmlspecialchars($id) . '" class="form-control" readOnly="readOnly" /></div>'; ?>
                     </div>
                     <div class="form-group row">
                         <label for="empName" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empName" name="empName" value="' . $name . '" class="form-control" autofocus /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empName" name="empName" value="' . htmlspecialchars($name) . '" class="form-control" autofocus /></div>'; ?>
                     </div>
                     <div class="form-group row">
                         <label for="empPos" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empPos" name="empPos" value="' . $pos . '" class="form-control" /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empPos" name="empPos" value="' . htmlspecialchars($pos) . '" class="form-control" /></div>'; ?>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
