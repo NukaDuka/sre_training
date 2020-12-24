@@ -39,8 +39,8 @@ if (isset($_POST["submit"])) {
     if (!mysqli_stmt_execute($query)) {
         redirect("/php_tut/code/employee_details/error.php");
     }
-    $r = "rows" . mysqli_stmt_affected_rows($query) . $id . $name;
-    redirect($r);
+    //$r = "rows" . mysqli_stmt_affected_rows($query) . $id . $name;
+    //redirect($r);
     mysqli_stmt_close($query);
     mysqli_close($con);
 
