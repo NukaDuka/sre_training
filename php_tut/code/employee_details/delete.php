@@ -128,7 +128,7 @@
                             <li class="list-group-item">Position: <?php echo $pos ?></li>
                         </ul>
                     </div>   
-                    <div class="row justify-content-center">
+                    <div class="row justify-content-center mt-3">
                         <div class="col-sm-2">
                             <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                             <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
