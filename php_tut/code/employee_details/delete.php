@@ -126,7 +126,7 @@
                         <li class="list-group-item">Employee name: <?php echo $name ?></li>
                         <li class="list-group-item">Position: <?php echo $pos ?></li>
                     </ul>   
-                    <div class="row justify-content-center col-sm-8">
+                    <div class="row justify-content-around">
                         <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                         <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                     </div>                     
