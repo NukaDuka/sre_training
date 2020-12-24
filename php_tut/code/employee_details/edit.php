@@ -5,7 +5,6 @@ function redirect($location) {
     header($header_str); 
     exit();
 }
-print_r($_POST);
 if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
     redirect("/php_tut/code/employee_details/get.php");
 }
