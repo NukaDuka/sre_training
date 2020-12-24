@@ -116,7 +116,7 @@
                     <p>INTRUSIVE ADS</p>
                 </div>
             </div>
-            <div class="col-sm-8 text-left justify-content-center">
+            <div class="col-sm-8 text-center">
                 <h1>Delete employee record</h1>
                 <hr>
                 <h3>Are you sure you want to delete the following record?</h3>
