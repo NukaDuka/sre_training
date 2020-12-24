@@ -112,6 +112,7 @@ $id = $_POST['empID'];
                         <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readonly="readonly"></div>'; ?>
                     </div>
                 </form>
+            </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
                     <p>INTRUSIVE ADS</p>
