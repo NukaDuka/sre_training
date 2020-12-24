@@ -131,7 +131,6 @@
                     <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                     <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                 </div>
-                </div>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
