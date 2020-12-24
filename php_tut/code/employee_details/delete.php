@@ -8,7 +8,26 @@
     if (!isset($_GET['empID']) && !isset($_POST['yes'])) {
         redirect("/php_tut/code/employee_details/get.php");
     }
-
+    if (isset($_POST['no'])) {
+        $id = $_POST['id'];
+        $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
+        redirect($redir_str);
+    }
+    if (isset($_POST['yes'])) {
+        $query_text = "delete from employees where id=?";
+        $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+        if ($con) {
+            $query = mysqli_prepare($con, $query_text);
+            mysqli_stmt_bind_param($query, 's', $id);
+            if (!mysqli_stmt_execute($query)) {
+                redirect("/php_tut/code/employee_details/get.php?delete=0");  
+            }
+            mysqli_stmt_close($query);
+            mysqli_close($con);
+            $redir_str = "/php_tut/code/employee_details/get.php?delete=1";
+            redirect($redir_str);
+        }
+    }
     $id = $_GET['empID'];
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if ($con) {
@@ -20,6 +39,7 @@
         mysqli_stmt_bind_result($query, $id, $name, $pos);
         mysqli_stmt_fetch($query);
         mysqli_stmt_close($query);
+        mysqli_close($con);
     }
 
 ?>
@@ -130,8 +150,11 @@
                     </div>   
                     <div class="row justify-content-center mt-3">
                         <div class="col-sm-auto">
+                            <form action="delete.php" method="post"></form>
                             <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                             <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                            <?php echo '<input type="hidden" name="id" id="id" value="' . $id . '">'; ?>
+                            </form>
                         </div>
                     </div>                     
                 </div>
