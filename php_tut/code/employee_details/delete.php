@@ -121,13 +121,13 @@
                 <hr>
                 <h3>Are you sure you want to delete the following record?</h3>
                 <div class="justify-content-center">
-                    <ul class="list-group col-sm-auto">
+                    <ul class="list-group">
                         <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                         <li class="list-group-item">Employee name: <?php echo $name ?></li>
                         <li class="list-group-item">Position: <?php echo $pos ?></li>
                     </ul>                        
                 </div>
-                <div class="justify-content-center col-sm-auto">
+                <div class="justify-content-center">
                     <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                     <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                 </div>
