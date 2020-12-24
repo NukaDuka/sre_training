@@ -115,11 +115,6 @@ $elapsed_time = microtime(true) - $start_time;
           }
           .row.content {height:auto;}
         }
-        td a { 
-            display: block; 
-            padding: 16px; 
-            align: center
-        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -224,7 +219,7 @@ $elapsed_time = microtime(true) - $start_time;
                             echo '<td>' . $id[$count-1] . '</td>';
                             echo '<td>' . $name[$count-1] . '</td>';
                             echo '<td>' . $pos[$count-1] . '</td>';
-                            echo '<td><a href="edit.php?empID="' . $id[$count-1] . '">Edit</a></td>';
+                            echo '<td class="text-center"><a href="edit.php?empID="' . $id[$count-1] . '">Edit</a></td>';
                             echo '</tr>';
                         }
                         echo '</tbody>';
