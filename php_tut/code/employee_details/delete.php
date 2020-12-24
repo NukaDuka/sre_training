@@ -5,7 +5,7 @@
         exit();
     }
 
-    if (!isset($_GET['empID']) && !isset($_POST['yes'])) {
+    if (!isset($_GET['empID']) && !isset($_POST['yes']) && !isset($_POST['no'])) {
         redirect("/php_tut/code/employee_details/get.php");
     }
     if (isset($_POST['no'])) {
