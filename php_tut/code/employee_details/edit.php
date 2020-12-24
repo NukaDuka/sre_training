@@ -8,7 +8,7 @@ if (!isset($_GET['empID']) && !isset(_POST['submit'])) {
     exit();
 }
 
-$id = $_POST['empID'];
+$id = $_GET['empID'];
 
 ?>
 <html lang="en">
@@ -109,7 +109,7 @@ $id = $_POST['empID'];
                 <form action="edit.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="' . $id . '" class="form-control" /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readOnly="readOnly" /></div>'; ?>
                     </div>
                 </form>
             </div>
