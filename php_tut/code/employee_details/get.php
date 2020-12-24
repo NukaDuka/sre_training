@@ -115,6 +115,11 @@ $elapsed_time = microtime(true) - $start_time;
           }
           .row.content {height:auto;}
         }
+        td a { 
+            display: block; 
+            border: 1px solid black;
+            padding: 16px; 
+        }
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -208,6 +213,7 @@ $elapsed_time = microtime(true) - $start_time;
                         echo '<th scope="col">Employee ID</th>';
                         echo '<th scope="col">Name</th>';
                         echo '<th scope="col">Position</th>';
+                        echo '<th scope="col"></th>';
                         echo '</tr>';
                         echo '</thead>';
                         echo '<tbody>';
