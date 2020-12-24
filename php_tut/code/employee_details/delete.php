@@ -119,19 +119,18 @@
             <div class="col-sm-8">
                 <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
-                <div class="text-center container">
-                    <h3>Are you sure you want to delete the following record?</h3>
-                    <div class="row justify-content-center">
-                        <ul class="list-group col-sm-auto">
-                            <li class="list-group-item">Employee ID: <?php echo $id ?></li>
-                            <li class="list-group-item">Employee name: <?php echo $name ?></li>
-                            <li class="list-group-item">Position: <?php echo $pos ?></li>
-                        </ul>                        
-                    </div>
-                    <div class="row justify-content-center col-sm-auto">
-                        <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
-                        <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
-                    </div>
+                <h3>Are you sure you want to delete the following record?</h3>
+                <div class="row justify-content-center">
+                    <ul class="list-group col-sm-auto">
+                        <li class="list-group-item">Employee ID: <?php echo $id ?></li>
+                        <li class="list-group-item">Employee name: <?php echo $name ?></li>
+                        <li class="list-group-item">Position: <?php echo $pos ?></li>
+                    </ul>                        
+                </div>
+                <div class="row justify-content-center col-sm-auto">
+                    <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
+                    <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                </div>
                 </div>
             </div>
             <div class="col-sm-2 sidenav">
