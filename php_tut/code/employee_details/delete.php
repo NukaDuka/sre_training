@@ -122,7 +122,7 @@
                 <h3>Are you sure you want to delete the following record?</h3>
                 <div class="container">
                     <div class="row">
-                        <ul class="row list-group">
+                        <ul class="list-group">
                             <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                             <li class="list-group-item">Employee name: <?php echo $name ?></li>
                             <li class="list-group-item">Position: <?php echo $pos ?></li>
