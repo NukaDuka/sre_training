@@ -20,7 +20,8 @@
             $query = mysqli_prepare($con, $query_text);
             mysqli_stmt_bind_param($query, 's', $id);
             if (!mysqli_stmt_execute($query)) {
-                redirect("/php_tut/code/employee_details/get.php?delete=0");  
+                $redir_str = "/php_tut/code/employee_details/get.php?delete=0&id=" . $id;
+                redirect($redir_str);  
             }
             mysqli_stmt_close($query);
             mysqli_close($con);
