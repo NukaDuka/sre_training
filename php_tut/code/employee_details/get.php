@@ -219,7 +219,7 @@ $elapsed_time = microtime(true) - $start_time;
                             echo '<td>' . $id[$count-1] . '</td>';
                             echo '<td>' . $name[$count-1] . '</td>';
                             echo '<td>' . $pos[$count-1] . '</td>';
-                            echo '<td><div class="d-flex justify-content-sm-around"><div class="col-sm-5"><a class="btn btn-primary" href="edit.php?empID="' . $id[$count-1] . '">Edit</a> <a class="btn btn-danger" href="delete.php?empID="' . $id[$count-1] . '">Delete</a></div></div></td>';
+                            echo '<td><div class="d-flex justify-content-sm-around"><div class="col-sm-6"><a class="btn btn-primary" href="edit.php?empID="' . $id[$count-1] . '">Edit</a> <a class="btn btn-danger" href="delete.php?empID="' . $id[$count-1] . '">Delete</a></div></div></td>';
                             echo '</tr>';
                         }
                         echo '</tbody>';
