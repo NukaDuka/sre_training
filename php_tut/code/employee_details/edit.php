@@ -116,7 +116,7 @@ mysqli_close($con);
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="index.html">Employee details page</a>
+        <a class="navbar-brand" href="index.html">Edit details for employee no. <?php echo $id; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

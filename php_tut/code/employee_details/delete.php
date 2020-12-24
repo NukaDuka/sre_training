@@ -1,3 +1,28 @@
+<?php
+    function redirect($location) {
+        $header_str = "Location: " . $location;
+        header($header_str); 
+        exit();
+    }
+
+    if (!isset($_GET['empID']) && !isset($_POST['yes'])) {
+        redirect("/php_tut/code/employee_details/get.php");
+    }
+
+    $id = $_GET['empID'];
+    $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+    if ($con) {
+        $query = mysqli_prepare($con, "select * from employees where id = ?");
+        mysqli_stmt_bind_param($query, 's', $id);
+        if (!mysqli_stmt_execute($query)) {
+            $success = false;  
+        }
+        mysqli_stmt_bind_result($query, $id, $name, $pos);
+        mysqli_stmt_fetch($query);
+        mysqli_stmt_close($query);
+    }
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -92,15 +117,20 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
-                <h1>Your new administrative space</h1>
-                <p>Using our revolutionary new proprietary database entry technology, updating your employee details has never been easier!</p>
+                <h1>Delete employee record</h1>
                 <hr>
-                <h3>Sitemap</h3>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><a href="index.html">Home</a></li>
-                    <li class="list-group-item"><a href="enter.php">Enter details</a></li>
-                    <li class="list-group-item"><a href="get.php">Get details</a></li>
-                </ul>
+                <div class="d-flex justify-content-center">
+                    <h3>Are you sure you want to delete the following record?</h3>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Employee ID: <?php echo $id ?></li>
+                        <li class="list-group-item">Employee name: <?php echo $name ?></li>
+                        <li class="list-group-item">Position: <?php echo $pos ?></li>
+                    </ul>
+                    <div class="col-sm-auto">
+                        <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
+                        <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                    </div>
+                </div>
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="jumbotron bg-warning">
