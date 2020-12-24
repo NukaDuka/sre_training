@@ -3,6 +3,7 @@
     $id = trim($_POST['empID']);
     $name = trim($_POST['empName']);
     $pos = trim($_POST['empPos']);
+    $success = true;
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if (isset($_POST['submit'])){
         if ($con) {
@@ -15,13 +16,14 @@
         }
         else {
             echo "Error: " . mysqli_connect_error();
+            $success = false;
         }
-        mysqli_close($con);
-        #$header_str = "Location: /php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
-        #header($header_str); 
-        if ($success) echo "Success";
-        else echo "Failure";
-        #exit();
+        if ($success) {
+            mysqli_close($con);
+            $header_str = "Location: /php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
+            header($header_str); 
+            exit();
+        }
     }
 ?>
 
@@ -123,6 +125,11 @@
                 </div>
             </div>
             <div class="col-sm-8 text-left">
+                <?php 
+                if (!$success) {
+                    echo '<div class="alert alert-danger alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error: </strong> Employee ID ' . $id . ' already exists in the database.</div>';
+                }
+                ?>
                 <h1>Enter employee details</h1>
                 <hr>
                 <form action="enter.php" method="post" autocomplete="off">
