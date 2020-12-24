@@ -1,13 +1,50 @@
 <?php 
 
-function redirect() {
-    $header_str = "Location: /php_tut/code/employee_details/get.php";
+function redirect($location) {
+    $header_str = "Location: " . $location;
     header($header_str); 
     exit();
 }
 
 if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
-    redirect();
+    redirect("/php_tut/code/employee_details/get.php");
+}
+if (isset($_POST["submit"])) {
+    $id = $_POST['empID'];
+    $pos = $_POST['empPos'];
+    $name = $_POST['empName'];
+
+    $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+    if (!$con) {
+        redirect("/php_tut/code/employee_details/error.php")
+    }
+    $query_string = "update employees set";
+    if (isset($_POST['empName'])){
+        $query_string += 'name=?';
+    }
+    if (isset($_POST['empName']) && isset($_POST['empPos'])) $query_string += ", ";
+    if (isset($_POST['empPos'])){
+        $query_string += "pos=?";
+    }
+    $query_string += " where id=?"
+    $query = mysqli_prepare($con, $query_string);
+    $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
+
+    if (isset($_POST['empName'])) mysqli_stmt_bind_param($query, 'ss', $id, $name);
+    else if (isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
+    else if (isset($_POST['empName']) && isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
+    else{
+        mysqli_close($con);
+        redirect($redir_str);
+    }
+
+    if (!mysqli_stmt_execute($query)) {
+        redirect("/php_tut/code/employee_details/error.php");
+    }
+    mysqli_stmt_close($query);
+    mysqli_close($con);
+
+    redirect($redir_str);
 }
 $success = true;
 $id = $_GET['empID'];
