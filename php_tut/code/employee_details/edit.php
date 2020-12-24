@@ -19,23 +19,23 @@ if (isset($_POST["submit"])) {
         redirect("/php_tut/code/employee_details/error.php");
     }
     $query_string = "update employees set ";
-    if (isset($_POST['empName'])){
+    if ($_POST['empName']) != ""){
         $query_string .= 'name=?';
     }
-    if (isset($_POST['empName']) && isset($_POST['empPos'])) $query_string .= ", ";
-    if (isset($_POST['empPos'])){
+    if ($_POST['empName'] != "" && $_POST['empPos'] != "") $query_string .= ", ";
+    if ($_POST['empPos']) != ""){
         $query_string .= "pos=?";
     }
     $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
-    if (!isset($_POST['empName']) && !isset($_POST['empPos'])) {
+    if ($_POST['empName']) == "" && $_POST['empPos']) == "") {
         mysqli_close($con);
         redirect($redir_str);
     }
     $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
-    if (isset($_POST['empName'])) mysqli_stmt_bind_param($query, 'ss', $id, $name);
-    else if (isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
-    else if (isset($_POST['empName']) && isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
+    if ($_POST['empName']) != "") mysqli_stmt_bind_param($query, 'ss', $id, $name);
+    else if ($_POST['empPos']) != "") mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
+    else if ($_POST['empName'] != "" && $_POST['empPos'] != "") mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
     else{
         
     }
