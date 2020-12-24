@@ -150,10 +150,10 @@
                     </div>   
                     <div class="row justify-content-center mt-3">
                         <div class="col-sm-auto">
-                            <form action="delete.php" method="post"></form>
-                            <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
-                            <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
-                            <?php echo '<input type="hidden" name="id" id="id" value="' . $id . '">'; ?>
+                            <form action="delete.php" method="post">
+                                <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
+                                <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
+                                <?php echo '<input type="hidden" name="id" id="id" value="' . $id . '">'; ?>
                             </form>
                         </div>
                     </div>                     
