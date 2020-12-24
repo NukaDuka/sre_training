@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
     if (!$con) {
         redirect("/php_tut/code/employee_details/error.php");
     }
-    $query_string = "update employees set";
+    $query_string = "update employees set ";
     if (isset($_POST['empName'])){
         $query_string .= 'name=?';
     }
@@ -33,7 +33,6 @@ if (isset($_POST["submit"])) {
     }
     $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
-    echo $query_string;
     if (isset($_POST['empName'])) mysqli_stmt_bind_param($query, 'ss', $id, $name);
     else if (isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
     else if (isset($_POST['empName']) && isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
