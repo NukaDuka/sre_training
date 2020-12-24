@@ -109,7 +109,7 @@ $id = $_POST['empID'];
                 <form action="edit.php" method="post" autocomplete="off">
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readonly="readonly"></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" placeholder="' . $id . '" class="form-control" readonly="readonly" /></div>'; ?>
                     </div>
                 </form>
             </div>
