@@ -119,7 +119,7 @@
             <div class="col-sm-8">
                 <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
-                <div class="col-sm-auto text-center ">
+                <div class="text-center">
                     <h3>Are you sure you want to delete the following record?</h3>
                     <div class="d-flex justify-content-center">
                         <ul class="list-group col-sm-auto">
