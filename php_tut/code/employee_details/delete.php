@@ -14,6 +14,7 @@
         redirect($redir_str);
     }
     if (isset($_POST['yes'])) {
+        $id = $_POST['id'];
         $query_text = "delete from employees where id=?";
         $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
         if ($con) {
