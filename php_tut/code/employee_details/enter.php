@@ -17,8 +17,8 @@
             echo "Error: " . mysqli_connect_error();
         }
         mysqli_close($con);
-        $header_str = "Location: /php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
-        header($header_str); 
+        #$header_str = "Location: /php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
+        #header($header_str); 
         echo $success;
         #exit();
     }
