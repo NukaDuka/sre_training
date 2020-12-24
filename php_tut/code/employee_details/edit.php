@@ -7,8 +7,23 @@ if (!isset($_GET['empID']) && !isset(_POST['submit'])) {
     header($header_str); 
     exit();
 }
-
+$success = true;
 $id = $_GET['empID'];
+$con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
+if ($con) {
+    $query = mysqli_prepare($con, "select * from employees where id = ?");
+    mysqli_stmt_bind_param($query, 's', $id);
+    if (!mysqli_stmt_execute($query)) {
+        $success = false;  
+    }
+    mysqli_stmt_bind_result($query, $id, $name, $pos);
+    mysqli_stmt_fetch($query);
+    mysqli_stmt_close($query);
+}
+else {
+    echo "Error: " . mysqli_connect_error();
+}
+mysqli_close($con);
 
 ?>
 <html lang="en">
@@ -110,6 +125,19 @@ $id = $_GET['empID'];
                     <div class="form-group row">
                         <label for="empID" class="col-sm-2 col-form-label">Employee ID: </label>
                         <?php echo '<div class="col-sm-10"><input type="text" id="empID" name="empID" value="' . $id . '" class="form-control" readOnly="readOnly" /></div>'; ?>
+                    </div>
+                    <div class="form-group row">
+                        <label for="empName" class="col-sm-2 col-form-label">Employee ID: </label>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empName" name="empName" value="' . $id . '" class="form-control" autofocus /></div>'; ?>
+                    </div>
+                    <div class="form-group row">
+                        <label for="empPos" class="col-sm-2 col-form-label">Employee ID: </label>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empPos" name="empPos" value="' . $id . '" class="form-control" /></div>'; ?>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-10">
+                            <input type="submit" name="submit" class="btn btn-dark">
+                        </div>
                     </div>
                 </form>
             </div>
