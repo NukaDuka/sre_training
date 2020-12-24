@@ -2,7 +2,6 @@
 <?php 
 
 if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
-    echo "No info provided, redirecting to retrieval page";
     $header_str = "Location: /php_tut/code/employee_details/get.php";
     header($header_str); 
     exit();
