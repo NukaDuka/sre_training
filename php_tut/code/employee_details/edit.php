@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
 
     $con = mysqli_connect("mariadb", "employee_php", "ZW1wbG95ZWVfdGFibGUK", "employee");
     if (!$con) {
-        redirect("/php_tut/code/employee_details/error.php")
+        redirect("/php_tut/code/employee_details/error.php");
     }
     $query_string = "update employees set";
     if (isset($_POST['empName'])){
