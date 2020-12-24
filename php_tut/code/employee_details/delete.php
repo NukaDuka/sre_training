@@ -119,9 +119,9 @@
             <div class="col-sm-8">
                 <div class="text-left"><h1>Delete employee record</h1></div>
                 <hr>
-                <div class="col-sm-auto text-center container">
+                <div class="col-sm-auto text-center ">
                     <h3>Are you sure you want to delete the following record?</h3>
-                    <div class="row d-flex justify-content-center">
+                    <div class="d-flex justify-content-center">
                         <ul class="list-group col-sm-auto">
                             <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                             <li class="list-group-item">Employee name: <?php echo $name ?></li>
@@ -129,7 +129,7 @@
                         </ul>
                     </div>
 
-                    <div class="row d-flex justify-content-center">
+                    <div class="d-flex justify-content-center">
                         <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                         <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                     </div>
