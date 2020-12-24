@@ -28,6 +28,7 @@ if (isset($_POST["submit"])) {
     }
     $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
+    echo $query;
     $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
 
     if (isset($_POST['empName'])) mysqli_stmt_bind_param($query, 'ss', $id, $name);
