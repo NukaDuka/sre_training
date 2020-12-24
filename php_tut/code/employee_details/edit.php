@@ -20,13 +20,13 @@ if (isset($_POST["submit"])) {
     }
     $query_string = "update employees set";
     if (isset($_POST['empName'])){
-        $query_string += 'name=?';
+        $query_string .= 'name=?';
     }
-    if (isset($_POST['empName']) && isset($_POST['empPos'])) $query_string += ", ";
+    if (isset($_POST['empName']) && isset($_POST['empPos'])) $query_string .= ", ";
     if (isset($_POST['empPos'])){
-        $query_string += "pos=?";
+        $query_string .= "pos=?";
     }
-    $query_string += " where id=?";
+    $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
     $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
 
