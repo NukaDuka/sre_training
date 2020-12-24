@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <?php 
-
 if (!isset($_GET['empID']) && !isset($_POST['submit'])) {
     $header_str = "Location: /php_tut/code/employee_details/get.php";
     header($header_str); 
@@ -25,6 +23,7 @@ else {
 mysqli_close($con);
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
