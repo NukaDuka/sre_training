@@ -122,7 +122,7 @@
                 <div class="col-sm-auto text-center">
                     <h3>Are you sure you want to delete the following record?</h3>
                     
-                    <ul class="list-group">
+                    <ul class="list-group col-sm-2">
                         <li class="list-group-item">Employee ID: <?php echo $id ?></li>
                         <li class="list-group-item">Employee name: <?php echo $name ?></li>
                         <li class="list-group-item">Position: <?php echo $pos ?></li>
