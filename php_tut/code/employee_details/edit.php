@@ -32,9 +32,9 @@ if (isset($_POST["submit"])) {
     }
     $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
-    if ($_POST['empName'] != "" && $_POST['empPos'] == "") mysqli_stmt_bind_param($query, 'ss', $id, $name);
-    else if ($_POST['empPos'] != "" && $_POST['empName'] == "") mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
-    else if ($_POST['empName'] != "" && $_POST['empPos'] != "") mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
+    if ($_POST['empName'] != "" && $_POST['empPos'] == "") mysqli_stmt_bind_param($query, 'ss', $name, $id);
+    else if ($_POST['empPos'] != "" && $_POST['empName'] == "") mysqli_stmt_bind_param($query, 'ss', $pos,  $id);
+    else if ($_POST['empName'] != "" && $_POST['empPos'] != "") mysqli_stmt_bind_param($query, 'sss', $name, $pos, $id);
 
     if (!mysqli_stmt_execute($query)) {
         redirect("/php_tut/code/employee_details/error.php");
