@@ -19,7 +19,8 @@
         mysqli_close($con);
         #$header_str = "Location: /php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
         #header($header_str); 
-        echo $success;
+        if ($success) echo "Success";
+        else echo "Failure";
         #exit();
     }
 ?>
