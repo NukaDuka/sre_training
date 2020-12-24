@@ -129,7 +129,7 @@
                         </ul>
                     </div>
 
-                    <div class="row col-sm-auto">
+                    <div class="row d-flex justify-content-center">
                         <input type="submit" class="btn btn-danger" id="no" name="no" value="No">
                         <input type="submit" class="btn btn-dark" id="yes" name="yes" value="Yes">
                     </div>
