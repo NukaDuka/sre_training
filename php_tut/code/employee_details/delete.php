@@ -24,8 +24,8 @@
                 redirect($redir_str);  
             }
             mysqli_stmt_close($query);
-            mysqli_close($con);
-            $redir_str = "/php_tut/code/employee_details/get.php?delete=1";
+            mysqli_close($con); 
+            $redir_str = "/php_tut/code/employee_details/get.php?delete=1&id=" . $id;
             redirect($redir_str);
         }
     }

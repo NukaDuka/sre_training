@@ -175,7 +175,7 @@ $elapsed_time = microtime(true) - $start_time;
                     if (count($id) != 0) echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Query executed (' . number_format($elapsed_time, 5). 's)</div>';
                     else echo '<div class="alert alert-danger alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Error: </strong> Employee ID ' . $form_id . ' does not exist.</div>';
                 } else if (isset($_GET['delete'])) {
-                    if ($_GET['delete'] == "0") {
+                    if ($_GET['delete'] == "1") {
                         echo '<div class="alert alert-success alert-dismissible" role="alert" align="center"><button type="button" class="close" data-dismiss="alert">&times;</button><strong>Success!</strong> Record successfully deleted</div>';
                     }
                     else {
