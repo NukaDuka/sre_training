@@ -126,11 +126,11 @@ mysqli_close($con);
                     </div>
                     <div class="form-group row">
                         <label for="empName" class="col-sm-2 col-form-label">Employee Name: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empName" name="empName" value="' . htmlspecialchars($name) . '" class="form-control" autofocus /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empName" name="empName" placeholder="' . htmlspecialchars($name) . '" class="form-control" autofocus /></div>'; ?>
                     </div>
                     <div class="form-group row">
                         <label for="empPos" class="col-sm-2 col-form-label">Position: </label>
-                        <?php echo '<div class="col-sm-10"><input type="text" id="empPos" name="empPos" value="' . htmlspecialchars($pos) . '" class="form-control" /></div>'; ?>
+                        <?php echo '<div class="col-sm-10"><input type="text" id="empPos" name="empPos" placeholder="' . htmlspecialchars($pos) . '" class="form-control" /></div>'; ?>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
