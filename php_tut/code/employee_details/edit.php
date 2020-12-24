@@ -26,17 +26,19 @@ if (isset($_POST["submit"])) {
     if (isset($_POST['empPos'])){
         $query_string .= "pos=?";
     }
+    $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
+    if (!isset($_POST['empName']) && !isset($_POST['empPos'])) {
+        mysqli_close($con);
+        redirect($redir_str);
+    }
     $query_string .= " where id=?";
     $query = mysqli_prepare($con, $query_string);
-    echo $query;
-    $redir_str = "/php_tut/code/employee_details/get.php?redirect=true&empID=" . $id;
 
     if (isset($_POST['empName'])) mysqli_stmt_bind_param($query, 'ss', $id, $name);
     else if (isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'ss', $id,  $pos);
     else if (isset($_POST['empName']) && isset($_POST['empPos'])) mysqli_stmt_bind_param($query, 'sss', $id,  $name, $pos);
     else{
-        mysqli_close($con);
-        redirect($redir_str);
+        
     }
 
     if (!mysqli_stmt_execute($query)) {
