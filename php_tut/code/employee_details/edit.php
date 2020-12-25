@@ -174,8 +174,8 @@ mysqli_close($con);
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-10">
-                            <input type="submit" class="btn btn-danger" id="cancel" name="cancel" value="Cancel">
                             <input type="submit" name="submit" id="submit" class="btn btn-dark">
+                            <input type="submit" class="btn btn-danger" id="cancel" name="cancel" value="Cancel">
                         </div>
                     </div>
                 </form>
