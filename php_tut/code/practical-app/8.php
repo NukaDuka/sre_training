@@ -18,7 +18,7 @@
 	<?php  
 		$var = "solarwinds123!";
 		$encrypted_var = crypt($var, "h4x0r");
-		echo $var;
+		echo $var . "<br>";
 		echo $encrypted_var;
 	?>
 
