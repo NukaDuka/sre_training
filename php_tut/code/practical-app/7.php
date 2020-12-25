@@ -16,19 +16,7 @@
 	
 	
 	
-	<?php  
-
-	/*  Step 1 - Create a database in PHPmyadmin
-
-		Step 2 - Create a table like the one from the lecture
-
-		Step 3 - Insert some Data
-
-		Step 4 - Connect to Database and read data
-
-*/
-	
-	?>
+	<a href="/php_tut/code/employee_details/index.html">Employee details app</a>
 
 
 
