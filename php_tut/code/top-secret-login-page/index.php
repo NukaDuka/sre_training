@@ -19,10 +19,8 @@
     <title>TOP SECRET login</title>
 </head>
 <body>
-    <div class="w-100 h-100">
-        <div class="d-flex justify-content-center align-items-center flex-fill-1">
-            <p class="text-center">test</p>
-        </div>
+    <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
+        <p class="text-center">test</p>
     </div>
 </body>
 </html>
