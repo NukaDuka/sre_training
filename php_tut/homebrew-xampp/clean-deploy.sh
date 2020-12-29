@@ -11,7 +11,8 @@ sudo docker volume rm xampp-mariadb-volume
 sudo docker volume create xampp-mariadb-volume
 sudo docker volume rm xampp-pma-volume
 sudo docker volume create xampp-pma-volume
-
+sudo docker volume rm xampp-redis-volume 
+sudo docker volume create xampp-redis-volume
 
 sudo docker secret rm xampp-mariadb-pwd
 echo 'Enter password:'

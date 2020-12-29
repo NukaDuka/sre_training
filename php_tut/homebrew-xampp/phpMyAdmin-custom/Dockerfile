@@ -7,8 +7,8 @@ COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 ENV TERM=xterm-256color
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN chown -R nobody:nogroup /tmp && cd /tmp && apt-get update && apt-get install -y --reinstall -o APT::Immediate-Configure=false gcc-8-base libc6 libnss-nis && apt-get full-upgrade -y && \
-    apt-get install -y wget unzip make nano man ucf psmisc libgdbm-dev libgdbm6 zlib1g zlib1g-dev lib32z1-dev libssl-dev libgd-perl libjpeg62-turbo-dev libfreetype-dev libfreetype6 libpng-dev libpng-tools libpng16-16 \
+RUN mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && chown -R nobody:nogroup /tmp && cd /tmp && apt-get update && apt-get install -y --reinstall -o APT::Immediate-Configure=false gcc-8-base libc6 libnss-nis && apt-get full-upgrade -y && \
+    apt-get install -y wget unzip make nano man ucf psmisc redis-tools libgdbm-dev libgdbm6 zlib1g zlib1g-dev lib32z1-dev libssl-dev libgd-perl libjpeg62-turbo-dev libfreetype-dev libfreetype6 libpng-dev libpng-tools libpng16-16 \
     libgeoip1 libgd3 expat libexpat1 libexpat1-dev libxml2 libxml2-dev libxml2-utils libncurses6 libncursesw6 libncurses-dev  && \
     wget https://github.com/libgd/libgd/releases/download/gd-2.3.0/libgd-2.3.0.tar.gz && tar xvzf libgd-2.3.0.tar.gz && cd libgd-2.3.0 && ./configure --enable-jpeg && make && make install && cd /tmp &&\
     curl -o sqlite-autoconf-3330000.tar.gz -s https://www.sqlite.org/2020/sqlite-autoconf-3330000.tar.gz && \
@@ -26,7 +26,7 @@ RUN chown -R nobody:nogroup /tmp && cd /tmp && apt-get update && apt-get install
     echo deb http://deb.debian.org/debian experimental main >> /etc/apt/sources.list && apt-get update && apt-get -t experimental install -y perl libperl-dev libperl5.32 && \
     apt-get install -y proftpd-basic proftpd-mod*
 
-RUN cpan -i CPAN::DistnameInfo Bundle::Apache2 && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp && mkdir /var/www/html/php_tut && chmod 755 /var/www/html/php_tut
+RUN pear config-set php_ini /usr/local/etc/php && pecl config-set php_ini /usr/local/etc/php && pecl install redis && echo extension=redis.so > /usr/local/etc/php/conf.d/redis.ini && cpan -i CPAN::DistnameInfo Bundle::Apache2 && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp && mkdir /var/www/html/php_tut && chmod 755 /var/www/html/php_tut
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["apache2-foreground"]

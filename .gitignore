@@ -7,3 +7,4 @@ jenkins-cli.jar
 jenkins
 *_backup.*
 nohup.out
+passwd

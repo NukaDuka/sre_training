@@ -51,6 +51,29 @@ services:
       - "443:443"
     volumes:
       - xampp-pma-volume:/var/www/html/php_tut
+  
+  redis:
+    image: nukaduka1/custom-redis:latest
+    healthcheck:
+      test: redis-cli --user ping --pass cGluZ3BvbmcK ping
+      interval: 1m
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+    restart: always
+    stop_grace_period: 30s
+    networks:
+      xampp-network:
+        aliases:
+          - xampp-redis
+          - redis
+      prometheus_overlay:
+        aliases:
+          - xampp-redis\
+    ports:
+      - "6379:6379"
+    volumes:
+      - xampp-redis-volume:/data
 
 networks:
   xampp-network:
@@ -62,6 +85,8 @@ volumes:
   xampp-mariadb-volume:
     external: true
   xampp-pma-volume:
+    external: true
+  xampp-redis-volume:
     external: true
 
 secrets:
