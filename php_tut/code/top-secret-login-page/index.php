@@ -14,8 +14,8 @@
     <title>TOP SECRET login</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row h-100 justify-content-center align-items-center">
+    <div class="container h-100">
+        <div class="row justify-content-center align-items-center">
             <div class="col-sm-auto">
                 <div class="jumbotron text-center">
                     <h1 class="display-2">Test</h1>
