@@ -22,6 +22,7 @@
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
             <h2 class="text-center">Login</h2>
+            <h4 class="text-center"><small class="muted">Only employees holding class-A permits are allowed to access this repository</small></h4>
             <hr class="my-4">
             <form action="validate.php" method="post">
                 <div class="form-group row">
