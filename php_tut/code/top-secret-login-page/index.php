@@ -25,13 +25,13 @@
             <hr class="my-4">
             <form action="validate.php" method="post">
                 <div class="form-group row">
-                    <label for="uname" class="col-sm-2 col-form-label">Username: </label>
+                    <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-10">
                         <input type="text" id="uname" name="uname" class="form-control" placeholder="Username">
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="passwd" class="col-sm-2 col-form-label">Password: </label>
+                    <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-10">
                         <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password">
                     </div>
