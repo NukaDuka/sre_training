@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="row justify-content-center align-items-center">
+        <div class="row h-100 justify-content-center align-items-center">
             <div class="col-sm-auto">
                 <div class="jumbotron text-center">
                     <h1 class="display-2">Test</h1>
