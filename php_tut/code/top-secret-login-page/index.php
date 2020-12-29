@@ -21,7 +21,7 @@
 <body>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
-            <h3 class="text-center">Login</h3>
+            <h2 class="text-center">Login</h2>
             <hr class="my-4">
             <form action="validate.php" method="post">
                 <div class="form-group row">
