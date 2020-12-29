@@ -24,27 +24,29 @@
             <h3 class="display-4 text-center">Login</h3>
             <hr class="my-4">
             <form action="validate.php" method="post">
-                <div class="form-group row">
-                    <label for="uname" class="col-sm-2 col-form-label">Username: </label>
-                    <div class="col-sm-10">
-                        <input type="text" id="uname" name="uname" placeholder="Username">
+                <div class="form-row">
+                    <div class="form-group row">
+                        <label for="uname" class="col-sm-2 col-form-label">Username: </label>
+                        <div class="col-sm-10">
+                            <input type="text" id="uname" name="uname" placeholder="Username">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <label for="passwd" class="col-sm-2 col-form-label">Password: </label>
-                    <div class="col-sm-10">
-                        <input type="password" id="passwd" name="passwd" placeholder="Password">
+                    <div class="form-group row">
+                        <label for="passwd" class="col-sm-2 col-form-label">Password: </label>
+                        <div class="col-sm-10">
+                            <input type="password" id="passwd" name="passwd" placeholder="Password">
+                        </div>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="persist">
-                        <label class="form-check-label" for="persist">
-                            Keep me logged in
-                        </label>
+                    <div class="form-group row">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="persist">
+                            <label class="form-check-label" for="persist">
+                                Keep me logged in
+                            </label>
+                        </div>
                     </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
                 </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </div>
     </div>
