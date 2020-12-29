@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=devy-4i>ce-width, initial-scale=1.0">
     <style>
         html, body {
             height: 100vh;
@@ -16,12 +16,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <title>TOP SECRET login</title>
+    <title>TOP SECRET login</title> 
 </head>
 <body>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
-            <h1 class="display-2">Test</h1>
+            <h3 class="display-4 text-center">Login</h3>
+            <hr class="my-4">
+            <form action="validate.php" method="post">
+                <div class="form-group row">
+                    <label for="uname" class="col-sm-2 col-form-label">Username: </label>
+                    <div class="col-sm-10">
+                        <input type="text" id="uname" name="uname" placeholder="Username">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="passwd" class="col-sm-2 col-form-label">Password: </label>
+                    <div class="col-sm-10">
+                        <input type="password" id="passwd" name="passwd" placeholder="Password">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="persist">
+                        <label class="form-check-label" for="persist">
+                            Keep me logged in
+                        </label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </form>
         </div>
     </div>
 </body>
