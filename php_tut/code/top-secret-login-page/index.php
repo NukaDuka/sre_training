@@ -1,5 +1,6 @@
 <?php 
 # dG9wX3NlY3JldF9zaGl0Cg== db
+# add code for encrypting password and sending it
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,19 +23,19 @@
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
             <h2 class="text-center">Login</h2>
-            <h5 class="text-center"><small class="muted">Only employees holding class-A permits are allowed to access this repository</small></h5>
+            <h5 class="text-center"><small class="muted">Only employees holding class-A permits can access this repository</small></h5>
             <hr class="my-4">
-            <form action="validate.php" method="post">
+            <form action="index.php" method="post">
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
-                        <input type="text" id="uname" name="uname" class="form-control" placeholder="Username">
+                        <input type="text" id="uname" name="uname" class="form-control" placeholder="Username" required autofocus>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password">
+                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password" required>
                     </div>
                 </div>
                 <div class="form-group row">
