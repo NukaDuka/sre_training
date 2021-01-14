@@ -49,7 +49,8 @@
                 </div>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
             </form>
-            <h5 class="text-center"><small class="muted"><a href="new.php">Create new account</a></small></h5>
+            <div class="h-100 container"><div class="row align-items-center"><h5 class="text-center "><small class="muted"><a href="new.php">Create new account</a></small></h5></div></div>
+            
         </div>
     </div>
 </body>
