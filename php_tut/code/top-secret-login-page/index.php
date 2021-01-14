@@ -49,7 +49,7 @@
                 </div>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
             </form>
-            <h5 class="text-center"><a href="new.php">Create new account</a></h5>
+            <h5 class="text-center"><small class="muted"><a href="new.php">Create new account</a></small></h5>
         </div>
     </div>
 </body>
