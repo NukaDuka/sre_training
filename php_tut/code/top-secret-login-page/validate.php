@@ -1,1 +1,6 @@
-<?php print_r($_POST); ?>
+<?php 
+if (!isset($_POST['submit'])) {
+    header('Location: /index.php');
+    exit();
+}
+?>
