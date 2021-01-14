@@ -22,8 +22,8 @@
 <body>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
-            <h2 class="text-center">Login</h2>
-            <h5 class="text-center"><small class="muted">Only employees holding class-A permits can access this repository</small></h5>
+            <h2 class="text-center">Secure login</h2>
+            <h5 class="text-center"><small class="muted">Only employees holding class-A permits can log in</small></h5>
             <hr class="my-4">
             <!-- TODO: Learn how to use TLS ;-; -->
             <form action="validate.php" method="post">
