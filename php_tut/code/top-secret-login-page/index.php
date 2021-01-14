@@ -40,14 +40,12 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="persist" id="persist" name="persist">
-                        <label class="form-check-label" for="persist">
-                            Keep me logged in
-                        </label>
-                    </div>
+                    <input class="form-check-input" type="checkbox" value="persist" id="persist" name="persist">
+                    <label class="form-check-label" for="persist">
+                        Keep me logged in
+                    </label>
                 </div>
-                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button><a class="btn btn-light" href="new.php">Create new account</a>
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button> <a class="btn btn-light" href="new.php">Create new account</a>
             </form>
             
         </div>
