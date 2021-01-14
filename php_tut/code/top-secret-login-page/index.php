@@ -1,6 +1,6 @@
 <?php 
 # dG9wX3NlY3JldF9zaGl0Cg== db
-# add code for encrypting password and sending it
+# add code for encrypting password and sending it   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +25,8 @@
             <h2 class="text-center">Login</h2>
             <h5 class="text-center"><small class="muted">Only employees holding class-A permits can access this repository</small></h5>
             <hr class="my-4">
-            <form action="index.php" method="post">
+            <!-- TODO: Learn how to use TLS ;-; -->
+            <form action="validate.php" method="post">
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
