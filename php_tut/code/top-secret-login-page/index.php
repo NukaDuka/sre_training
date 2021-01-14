@@ -46,7 +46,6 @@
                             <label class="form-check-label" for="persist">Keep me logged in</label>
                         </div>
                     </div>
-                    <div class="col-sm-3">Checkbox</div>
                 </div>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button> <a class="btn btn-light" href="new.php">Create new account</a>
             </form>
