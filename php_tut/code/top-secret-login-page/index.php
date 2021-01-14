@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <div class="col-sm-10">
+                    <div class="col-sm-9">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="persist" id="persist" name="persist">
                             <label class="form-check-label" for="persist">Keep me logged in</label>
