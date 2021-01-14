@@ -47,7 +47,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button> <a class="button button-light" href="new.php">Create new account</a>
+                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button><a class="btn btn-light" href="new.php">Create new account</a>
             </form>
             
         </div>
