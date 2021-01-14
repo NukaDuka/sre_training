@@ -40,8 +40,8 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <input class="form-check-input" type="checkbox" value="persist" id="persist" name="persist">
-                    <label class="form-check-label" for="persist">
+                    <input class="form-check-input col-sm-1" type="checkbox" value="persist" id="persist" name="persist">
+                    <label class="form-check-label col-sm-11" for="persist">
                         Keep me logged in
                     </label>
                 </div>
