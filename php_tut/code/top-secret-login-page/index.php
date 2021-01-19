@@ -1,6 +1,7 @@
 <?php 
-# dG9wX3NlY3JldF9zaGl0Cg== db
 # add code for encrypting password and sending it   
+// if session cookie exists, validate it with redis
+// if it is correct, redirect to content automatically
 ?>
 <!DOCTYPE html>
 <html lang="en">
