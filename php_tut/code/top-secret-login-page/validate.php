@@ -6,7 +6,7 @@ if (!isset($_POST['submit'])) {
 $conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
 if ($conn->connect_error) {
     //http_response_code(500);
-    die(echo "Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 );
 }
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
@@ -27,6 +27,7 @@ else if ($i > 1)
 {
     //username cannot exist more than once, ensure it in new.php
     http_response_code(500);
+    die($i);
 }
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
