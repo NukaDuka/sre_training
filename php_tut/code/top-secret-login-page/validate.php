@@ -26,7 +26,7 @@ if ($i == 0)
 else if ($i > 1)
 {
     //username cannot exist more than once, ensure it in new.php
-    http_response_code(500);
+    //http_response_code(500);
     die($i);
 }
 
