@@ -8,6 +8,7 @@ if ($conn->connect_error) {
     http_response_code(500);
     die("Connection failed: " . $conn->connect_error);
 }
+print_r($_POST);
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
 $stmt->bind_param("s", $_POST['uname']);
 $stmt->execute();
