@@ -19,7 +19,8 @@ while ($stmt->fetch())
 }
 if ($i == 0)
 {
-    //user not found
+    header('Location: /php_tut/code/top-secret-login-page/index.php', false, 401);
+    exit()
 }
 else if ($i > 1)
 {
