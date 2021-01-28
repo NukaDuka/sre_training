@@ -1,7 +1,13 @@
 <?php 
 session_start();
+$redis = new Redis();
+$redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
+if (!$redis->ping()) http_response_code(500);
+$key = $redis->get('ts_admin:token_key');
+$_SESSION['key'] = $key;
 $token = hash('sha256', uniqid(session_id(), true));
-$cookie = json_encode(array("uname"=>$_POST['uname'], "token"=>$token));
+$cookie = hash_hmac('sha256', json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), $key);
+
 $_SESSION['cook'] = $cookie;
 if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
@@ -38,8 +44,12 @@ if ($processed_passwd == $passwd_enc)
 {
     //redirect to content
     //create cookie 
+    $redis = new Redis();
+    $redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
+    if (!$redis->ping()) http_response_code(500);
+    $_SESSION['key'] =  $redis->get('ts_admin:token_key');
     $token = hash('sha256', uniqid(session_id(), true));
-    $cookie = json_encode(array("uname"=>$_POST['uname'], "token"=>$token));
+    $cookie = hash_hmac('sha256', json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), $key);
     
     //setcookie('ts_auth')
     //upload cookie to redis depending on checkbox value
