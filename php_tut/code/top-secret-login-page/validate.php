@@ -35,6 +35,8 @@ if ($processed_passwd == $passwd_enc)
 {
     //redirect to content
     //create cookie 
+    $token = hash('sha256', uniqid(session_id(), true));
+    echo $token;
     //setcookie($_POST['username'], )
     //upload cookie to redis depending on checkbox value
 }
