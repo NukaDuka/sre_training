@@ -20,6 +20,7 @@ while ($stmt->fetch())
 if ($i == 0)
 {
     $_SESSION['unauth'] = true; 
+    $_SESSION['uname'] = $uname;
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
 }

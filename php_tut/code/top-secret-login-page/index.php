@@ -27,12 +27,19 @@ session_start();
             <h2 class="text-center">Secure login</h2>
             <h5 class="text-center"><small class="muted">Only employees holding class-A permits can log in</small></h5>
             <hr class="my-4">
+            <div class="text-center alert alert-danger alert-dismissible fade show" role="alert">Invalid username or password. Please try again.</div>
             <!-- TODO: Learn how to use TLS ;-; -->
             <form action="validate.php" method="post">
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
-                        <input type="text" id="uname" name="uname" class="form-control" placeholder="Username" required autofocus>
+                        <?php
+                        if (isset($_SESSION['unauth']) && $_SESSION['unauth']) {
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" required autofocus>';
+                        } else {
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" required autofocus>';
+                        }
+                        ?>
                     </div>
                 </div>
                 <div class="form-group row">
