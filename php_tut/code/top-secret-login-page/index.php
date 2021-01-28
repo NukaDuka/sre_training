@@ -3,6 +3,7 @@
 // if session cookie exists, validate it with redis
 // if it is correct, redirect to content automatically
 session_start();
+print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,7 +29,7 @@ session_start();
             <h5 class="text-center"><small class="muted">Only employees holding class-A permits can log in</small></h5>
             <hr class="my-4">
             <?php 
-            if (isset($_SESSION['unauth']) && !$_SESSION['unauth']) echo '<div class="alert alert-danger alert-dismissible fade show" role="alert"><p class="text-center">Invalid username or password. Please try again.</p><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>';
+            if (isset($_SESSION['unauth']) && !$_SESSION['unauth']) echo '<div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">Invalid username or password. Please try again.</p></div>';
             ?>
             <!-- TODO: Learn how to use TLS ;-; -->
             <form action="validate.php" method="post">
