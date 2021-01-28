@@ -3,7 +3,7 @@ if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
 }
-$conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
+/*$conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
 if ($conn->connect_error) {
     //http_response_code(500);
     die("Connection failed: " . $conn->connect_error);
@@ -42,5 +42,5 @@ else
 {
     echo -1;
     //redirect to index with error messg
-}
+}*/
 ?>

@@ -26,7 +26,7 @@ RUN mv /usr/local/etc/php/php.ini-production /usr/local/etc/php/php.ini && chown
     echo deb http://deb.debian.org/debian experimental main >> /etc/apt/sources.list && apt-get update && apt-get -t experimental install -y perl libperl-dev libperl5.32 && \
     apt-get install -y proftpd-basic proftpd-mod*
 
-RUN pear config-set php_ini /usr/local/etc/php && pecl config-set php_ini /usr/local/etc/php && pecl install redis && echo extension=redis.so > /usr/local/etc/php/conf.d/redis.ini && cpan -i CPAN::DistnameInfo Bundle::Apache2 && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp && mkdir /var/www/html/php_tut && chmod 755 /var/www/html/php_tut
+RUN pear config-set php_ini /usr/local/etc/php && pecl config-set php_ini /usr/local/etc/php && pecl install redis && echo extension=redis.so > /usr/local/etc/php/conf.d/redis.ini && pecl install xdebug && cpan -i CPAN::DistnameInfo Bundle::Apache2 && curl -o /opt/dbgpClient https://xdebug.org/files/binaries/dbgpClient && chmod +x /opt/dbgpClient && cpan -i Net::SSLeay GD XML::Parser XML::LibXML LWP::UserAgent Curses && cpan -i Locale::gettext XML::LibXSLT && cd / && rm -rf /tmp && mkdir /tmp && apt-get autoremove -y && chmod 777 /tmp && mkdir /var/www/html/php_tut && chmod 755 /var/www/html/php_tut
 
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 CMD ["apache2-foreground"]
