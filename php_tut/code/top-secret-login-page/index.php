@@ -3,7 +3,6 @@
 // if session cookie exists, validate it with redis
 // if it is correct, redirect to content automatically
 session_start();
-print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,3 +56,6 @@ print_r($_SESSION);
     </div>
 </body>
 </html>
+<?php
+$_SESSION['unauth'] = false;
+?>
