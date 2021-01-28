@@ -38,9 +38,9 @@ print_r($_SESSION);
                     <div class="col-sm-9">
                         <?php
                         if (isset($_SESSION['unauth']) && $_SESSION['unauth'] == true) {
-                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" autocomplete="off" required autofocus>';
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" onfocus="this.select()" required autofocus>';
                         } else {
-                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" autocomplete="off" required autofocus>';
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" onfocus="this.select()" required autofocus>';
                         }
                         ?>
                     </div>
