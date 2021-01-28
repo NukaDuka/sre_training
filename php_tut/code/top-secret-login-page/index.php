@@ -29,7 +29,7 @@ print_r($_SESSION);
             <h5 class="text-center"><small class="muted">Only employees holding class-A permits can log in</small></h5>
             <hr class="my-4">
             <?php 
-            if (isset($_SESSION['unauth']) && $_SESSION['unauth'] == false) echo '<div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">Invalid username or password. Please try again.</p></div>';
+            if (isset($_SESSION['unauth']) && $_SESSION['unauth'] == true) echo '<div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">Invalid username or password. Please try again.</p></div>';
             ?>
             <!-- TODO: Learn how to use TLS ;-; -->
             <form action="validate.php" method="post">
@@ -37,7 +37,7 @@ print_r($_SESSION);
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
                         <?php
-                        if (isset($_SESSION['unauth']) && $_SESSION['unauth'] == false) {
+                        if (isset($_SESSION['unauth']) && $_SESSION['unauth'] == true) {
                             echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" autocomplete="off" required autofocus>';
                         } else {
                             echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" autocomplete="off" required autofocus>';
