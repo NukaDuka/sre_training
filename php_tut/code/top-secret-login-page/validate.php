@@ -33,9 +33,9 @@ else if ($i > 1)
 $processed_passwd = hash('sha256', $_POST['passwd']);
 if ($processed_passwd == $passwd_enc)
 {
-    echo 1;
-    //redirect to index
+    //redirect to content
     //create cookie 
+    //setcookie($_POST['username'], )
     //upload cookie to redis depending on checkbox value
 }
 else

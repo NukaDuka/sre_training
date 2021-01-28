@@ -1,9 +1,9 @@
 <?php 
-# add code for encrypting password and sending it   
 // if session cookie exists, validate it with redis
 // if it is correct, redirect to content automatically
 session_start();
 print_r($_SESSION);
+echo session_id();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,4 +68,5 @@ print_r($_SESSION);
 </html>
 <?php
 $_SESSION['unauth'] = false;
+$_SESSION['uname'] = "";
 ?>
