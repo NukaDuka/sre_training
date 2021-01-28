@@ -1,4 +1,5 @@
 <?php 
+session_start();
 if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
@@ -18,7 +19,7 @@ while ($stmt->fetch())
 }
 if ($i == 0)
 {
-    $_SESSION['unauth'] = true;
+    $_SESSION['unauth'] = true; 
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
 }
