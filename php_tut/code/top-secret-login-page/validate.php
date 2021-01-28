@@ -4,9 +4,7 @@ if (!isset($_POST['submit'])) {
     exit();
 }
 $conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
-header('Connection: Done');
 if ($conn->connect_error) {
-    //http_response_code(500);
     die("Connection failed: " . $conn->connect_error);
 }
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
@@ -20,13 +18,12 @@ while ($stmt->fetch())
 }
 if ($i == 0)
 {
-    header('Location: /php_tut/code/top-secret-login-page/index.php', false, 401);
+    header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
 }
 else if ($i > 1)
 {
     //username cannot exist more than once, ensure it in new.php
-    //http_response_code(500);
     die($i);
 }
 
