@@ -1,5 +1,7 @@
 <?php 
 session_start();
+$token = hash('sha256', uniqid(session_id(), true));
+$_SESSION['token'] = $token;
 if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
@@ -35,8 +37,7 @@ if ($processed_passwd == $passwd_enc)
 {
     //redirect to content
     //create cookie 
-    $token = hash('sha256', uniqid(session_id(), true));
-    echo $token;
+    
     //setcookie($_POST['username'], )
     //upload cookie to redis depending on checkbox value
 }

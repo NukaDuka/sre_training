@@ -3,7 +3,6 @@
 // if it is correct, redirect to content automatically
 session_start();
 print_r($_SESSION);
-echo session_id();
 ?>
 <!DOCTYPE html>
 <html lang="en">
