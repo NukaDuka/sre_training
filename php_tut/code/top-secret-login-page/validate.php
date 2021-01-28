@@ -3,7 +3,7 @@ session_start();
 $redis = new Redis();
 $redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
 try {
-    key = $redis->get('ts_admin:token_key');
+    $key = $redis->get('ts_admin:token_key');
     $_SESSION['key'] = $key;
     $token = hash('sha256', uniqid(session_id(), true));
     $cookie = hash_hmac('sha256', json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), $key);
