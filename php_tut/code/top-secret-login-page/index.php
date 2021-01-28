@@ -35,9 +35,9 @@ session_start();
                     <div class="col-sm-9">
                         <?php
                         if (isset($_SESSION['unauth']) && $_SESSION['unauth']) {
-                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" required autofocus>';
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" value="' . $_SESSION['uname'] . '" autocomplete="off" required autofocus>';
                         } else {
-                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" required autofocus>';
+                            echo '<input type="text" id="uname" name="uname" class="form-control" placeholder="Username" autocomplete="off" required autofocus>';
                         }
                         ?>
                     </div>
@@ -45,7 +45,7 @@ session_start();
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password" required>
+                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="form-group row">
