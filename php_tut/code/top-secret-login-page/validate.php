@@ -18,7 +18,7 @@ $conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+$passwd_enc = "";
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
 $stmt->bind_param("s", $_POST['uname']);
 $stmt->execute();
@@ -43,9 +43,8 @@ else if ($i > 1)
 }
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
-$_SESSION['len'] = strlen($passwd_enc);
-/*
-if (strlen($passwd_enc) > 0 && strcmp($processed_passwd, $passwd_enc) == 0)
+
+if (strcmp($processed_passwd, $passwd_enc) == 0)
 {
     //redirect to content
     //create cookie 
@@ -70,5 +69,5 @@ else
 }
 $stmt->close();
 $conn->close();
-*/
+
 ?>
