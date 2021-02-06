@@ -27,15 +27,13 @@ $_SESSION['src'] = 'new';
             if (document.getElementById('passwd').value ==
                 document.getElementById('cpasswd').value) {
                 document.getElementById('submit').disabled = false;
-                document.getElementById('form').classname = "needs-validation";
-                document.getElementById('test').innerHTML = "ye";
+                document.getElementById('form').className = "needs-validation";
             } else {
                 document.getElementById('submit').disabled = true;
-                document.getElementById('form').classname = "was-validated";
+                document.getElementById('form').className = "was-validated";
             }
         }
     </script>
-    <p id="test"></p>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
             <h2 class="text-center">Create new account</h2>
