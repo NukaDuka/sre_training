@@ -44,7 +44,7 @@ else if ($i > 1)
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
 
-if (strcmp($processed_passwd, $passwd_enc) == 0)
+if (strlen($passwd_enc) > 0 && strcmp($processed_passwd, $passwd_enc) == 0)
 {
     //redirect to content
     //create cookie 
