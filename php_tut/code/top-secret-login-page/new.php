@@ -26,12 +26,12 @@ $_SESSION['src'] = 'new';
         var check = function() {
             if (document.getElementById('passwd').value ==
                 document.getElementById('cpasswd').value) {
-                document.getElementById('submit').disabled = false
-                document.getElementById('form').classname = "needs-validation"
-                document.getElementById('test').innerHTML = "ye"
+                document.getElementById('submit').disabled = false;
+                document.getElementById('form').classname = "needs-validation";
+                document.getElementById('test').innerHTML = "ye";
             } else {
-                document.getElementById('submit').disabled = false
-                document.getElementById('form').classname = "was-validated"
+                document.getElementById('submit').disabled = false;
+                document.getElementById('form').classname = "was-validated";
             }
         }
     </script>
@@ -60,7 +60,7 @@ $_SESSION['src'] = 'new';
                         <input type="password" id="cpasswd" name="cpasswd" class="form-control" onkeyup='check();' placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
-               <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
+               <button type="submit" name="submit" id="submit" class="btn btn-primary" disabled>Sign in</button>
             </form>
             
         </div>
