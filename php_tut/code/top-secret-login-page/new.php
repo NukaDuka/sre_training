@@ -49,13 +49,13 @@ $_SESSION['src'] = 'new';
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="passwd" name="passwd" class="form-control" onchange="check()" placeholder="Password" autocomplete="off" required>
+                        <input type="password" id="passwd" name="passwd" class="form-control" onkeyup='check();' placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Retype password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="cpasswd" name="cpasswd" class="form-control" onchange="check()" placeholder="Password" autocomplete="off" required>
+                        <input type="password" id="cpasswd" name="cpasswd" class="form-control" onkeyup='check();' placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
