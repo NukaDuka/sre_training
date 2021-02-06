@@ -43,7 +43,7 @@ else if ($i > 1)
 }
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
-
+/*
 if ($processed_passwd == $passwd_enc)
 {
     //redirect to content
@@ -69,5 +69,5 @@ else
 }
 $stmt->close();
 $conn->close();
-
+*/
 ?>
