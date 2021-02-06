@@ -23,7 +23,9 @@ $_SESSION['src'] = 'new';
 </head>
 <body>
     <script>
+        var toggle = false;
         var check = function() {
+            if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0) toggle = true;
             if (document.getElementById('passwd').value ==
                 document.getElementById('cpasswd').value) {
                 if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0)
