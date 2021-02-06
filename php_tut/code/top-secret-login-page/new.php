@@ -19,6 +19,18 @@ $_SESSION['src'] = 'new';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script>
+        var check = function() {
+            if (document.getElementById('passwd').value ==
+                document.getElementById('cpasswd').value) {
+                document.getElementById('submit').disabled = false
+                document.getElementById('form').classname = "needs-validation"
+            } else {
+                document.getElementById('submit').disabled = false
+                document.getElementById('form').classname = "was-validated"
+            }
+        }
+    </script>
     <title>TOP SECRET login</title> 
 </head>
 <body>
@@ -27,7 +39,7 @@ $_SESSION['src'] = 'new';
             <h2 class="text-center">Create new account</h2>
             <hr class="my-4">
             <!-- TODO: Learn how to use TLS ;-; -->
-            <form action="validate.php" method="post">
+            <form id="form" action="validate.php" method="post" class="needs-validation">
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
@@ -37,13 +49,13 @@ $_SESSION['src'] = 'new';
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password" autocomplete="off" required>
+                        <input type="password" id="passwd" name="passwd" class="form-control" onchange="check()" placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="passwd" class="col-sm-3 col-form-label">Retype password: </label>
                     <div class="col-sm-9">
-                        <input type="password" id="passwd" name="passwd" class="form-control" placeholder="Password" autocomplete="off" required>
+                        <input type="password" id="cpasswd" name="cpasswd" class="form-control" onchange="check()" placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
                <button type="submit" name="submit" id="submit" class="btn btn-primary">Sign in</button>
