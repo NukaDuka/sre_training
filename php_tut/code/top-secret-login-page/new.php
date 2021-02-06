@@ -33,12 +33,10 @@ $_SESSION['src'] = 'new';
                     document.getElementById('cpasswd').className = "form-control";
                 }
             } else {
-                if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0)
-                {
-                    document.getElementById('submit').disabled = true;
-                    document.getElementById('passwd').className = "form-control is-invalid";
-                    document.getElementById('cpasswd').className = "form-control is-invalid";
-                }
+                document.getElementById('submit').disabled = true;
+                document.getElementById('passwd').className = "form-control is-invalid";
+                document.getElementById('cpasswd').className = "form-control is-invalid";
+            
             }
         }
     </script>
