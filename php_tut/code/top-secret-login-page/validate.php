@@ -24,7 +24,7 @@ $stmt->bind_param("s", $_POST['uname']);
 $stmt->execute();
 $stmt->bind_result($uid, $uname, $passwd_enc);
 $i = 0;
-/*
+
 while ($stmt->fetch())
 {
     $i++;
@@ -41,7 +41,7 @@ else if ($i > 1)
     //username cannot exist more than once, ensure it in new.php
     die($i);
 }
-
+/*
 $processed_passwd = hash('sha256', $_POST['passwd']);
 if ($processed_passwd == $passwd_enc)
 {
