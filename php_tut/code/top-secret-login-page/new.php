@@ -30,7 +30,7 @@ $_SESSION['src'] = 'new';
                 document.getElementById('form').classname = "needs-validation";
                 document.getElementById('test').innerHTML = "ye";
             } else {
-                document.getElementById('submit').disabled = false;
+                document.getElementById('submit').disabled = true;
                 document.getElementById('form').classname = "was-validated";
             }
         }
