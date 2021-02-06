@@ -26,9 +26,12 @@ $_SESSION['src'] = 'new';
         var check = function() {
             if (document.getElementById('passwd').value ==
                 document.getElementById('cpasswd').value) {
-                document.getElementById('submit').disabled = false;
-                document.getElementById('passwd').className = "form-control";
-                document.getElementById('cpasswd').className = "form-control";
+                if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0)
+                {
+                    document.getElementById('submit').disabled = false;
+                    document.getElementById('passwd').className = "form-control";
+                    document.getElementById('cpasswd').className = "form-control";
+                }
             } else {
                 if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0)
                 {
