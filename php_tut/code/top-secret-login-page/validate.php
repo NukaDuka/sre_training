@@ -18,12 +18,13 @@ $conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-/*
+
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
 $stmt->bind_param("s", $_POST['uname']);
 $stmt->execute();
 $stmt->bind_result($uid, $uname, $passwd_enc);
 $i = 0;
+/*
 while ($stmt->fetch())
 {
     $i++;
