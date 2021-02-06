@@ -36,8 +36,11 @@ $_SESSION['src'] = 'new';
                 }
             } else {
                 document.getElementById('submit').disabled = true;
-                document.getElementById('passwd').className = "form-control is-invalid";
-                document.getElementById('cpasswd').className = "form-control is-invalid";
+                if (toggle) 
+                {
+                    document.getElementById('passwd').className = "form-control is-invalid";
+                    document.getElementById('cpasswd').className = "form-control is-invalid";
+                }
             
             }
         }
