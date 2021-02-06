@@ -27,10 +27,15 @@ $_SESSION['src'] = 'new';
             if (document.getElementById('passwd').value ==
                 document.getElementById('cpasswd').value) {
                 document.getElementById('submit').disabled = false;
-                document.getElementById('form').className = "needs-validation";
+                document.getElementById('passwd').className = "form-control";
+                document.getElementById('cpasswd').className = "form-control";
             } else {
-                document.getElementById('submit').disabled = true;
-                document.getElementById('form').className = "was-validated";
+                if (document.getElementById('passwd').value.length > 0 && document.getElementById('cpasswd').value.length > 0)
+                {
+                    document.getElementById('submit').disabled = true;
+                    document.getElementById('passwd').className = "form-control is-invalid";
+                    document.getElementById('cpasswd').className = "form-control is-invalid";
+                }
             }
         }
     </script>
@@ -39,7 +44,7 @@ $_SESSION['src'] = 'new';
             <h2 class="text-center">Create new account</h2>
             <hr class="my-4">
             <!-- TODO: Learn how to use TLS ;-; -->
-            <form id="form" action="validate.php" method="post" class="needs-validation">
+            <form id="form" action="validate.php" method="post" novalidate>
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
@@ -50,6 +55,7 @@ $_SESSION['src'] = 'new';
                     <label for="passwd" class="col-sm-3 col-form-label">Password: </label>
                     <div class="col-sm-9">
                         <input type="password" id="passwd" name="passwd" class="form-control" onkeyup='check();' placeholder="Password" autocomplete="off" required>
+                        <div class="invalid-feedback">Passwords do not match.</div>
                     </div>
                 </div>
                 <div class="form-group row">
