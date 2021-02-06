@@ -43,7 +43,8 @@ else if ($i > 1)
 }
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
-
+$_SESSION['len'] = strlen($passwd_enc);
+/*
 if (strlen($passwd_enc) > 0 && strcmp($processed_passwd, $passwd_enc) == 0)
 {
     //redirect to content
@@ -56,7 +57,7 @@ if (strlen($passwd_enc) > 0 && strcmp($processed_passwd, $passwd_enc) == 0)
     $cookie_time = isset($_POST['persist']) ? 86400 : 1200;
     $redis->del('ts:' . $_POST['uname']);
     setcookie('ts_auth', $cookie, time() + $cookie_time, '/php_tut/code/top-secret-login-page');
-    $redis->set('ts:' . $_POST['uname'], $token, $cookie_time)
+    $redis->set('ts:' . $_POST['uname'], $token, $cookie_time);
     header('Location: /php_tut/code/top-secret-login-page/content.php');
     exit();
 }
@@ -69,5 +70,5 @@ else
 }
 $stmt->close();
 $conn->close();
-
+*/
 ?>
