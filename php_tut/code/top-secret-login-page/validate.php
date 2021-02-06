@@ -43,6 +43,7 @@ else if ($i > 1)
 }
 
 $processed_passwd = hash('sha256', $_POST['passwd']);
+
 if ($processed_passwd == $passwd_enc)
 {
     //redirect to content
@@ -61,10 +62,12 @@ if ($processed_passwd == $passwd_enc)
 }
 else
 {
-    echo -1;
-    //redirect to index with error messg
+    $_SESSION['unauth'] = true; 
+    $_SESSION['uname'] = $_POST['uname'];
+    header('Location: /php_tut/code/top-secret-login-page/index.php');
+    exit();
 }
 $stmt->close();
 $conn->close();
-*/
+
 ?>
