@@ -19,6 +19,9 @@ $_SESSION['src'] = 'new';
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <title>TOP SECRET login</title> 
+</head>
+<body>
     <script>
         var check = function() {
             if (document.getElementById('passwd').value ==
@@ -31,9 +34,6 @@ $_SESSION['src'] = 'new';
             }
         }
     </script>
-    <title>TOP SECRET login</title> 
-</head>
-<body>
     <div class="w-100 h-100 d-flex justify-content-center align-items-center flex-fill-1">
         <div class="jumbotron">
             <h2 class="text-center">Create new account</h2>
