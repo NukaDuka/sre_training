@@ -9,7 +9,7 @@ $token = hash('sha256', uniqid(session_id(), true));
 $cookie = hash_hmac('sha256', json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), $key);
 $_SESSION['cook'] = $cookie;
 
-/*
+
 if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
@@ -18,6 +18,7 @@ $conn = new mysqli("mariadb", "ts_login", "o0RIeqP9TKn8iHfR", "ts_auth");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+/*
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
 $stmt->bind_param("s", $_POST['uname']);
 $stmt->execute();
