@@ -32,6 +32,7 @@ session_destroy();
     <style>
     html, body {
         height: 100vh;
+        background-color: black;
     }
     </style>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -40,9 +41,16 @@ session_destroy();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <iframe width="100%" height="90%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-        <a href="php_tut/code/top-secret-login-page/logout.php" class="btn btn-light">Logout</a>
+    <div class="container">
+        <div class="row" >
+            <iframe width="100%" height="90%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="row">
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+                <a href="php_tut/code/top-secret-login-page/logout.php" class="btn btn-light">Logout</a>
+            </div>
+        </div>
     </div>
+    
 </body>
 </html>
