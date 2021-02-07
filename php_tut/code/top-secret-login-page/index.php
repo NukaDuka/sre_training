@@ -2,6 +2,11 @@
 // if session cookie exists, validate it with redis
 // if it is correct, redirect to content automatically
 session_start();
+if (isset($_COOKIE['ts_auth'])
+{
+    $cookie = $_COOKIE['ts_auth'];
+    echo $cookie;
+})
 print_r($_SESSION);
 session_destroy();
 ?>
