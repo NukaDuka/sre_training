@@ -25,7 +25,15 @@ session_destroy();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick Astley's masterpiece was not playable through an embed :(</title>
+    <style>
+    html, body {
+        height: 100%;
+    }
+    </style>
 </head>
 <body>
     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
