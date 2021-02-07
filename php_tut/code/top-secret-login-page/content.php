@@ -43,7 +43,7 @@ session_destroy();
 <body>
     <iframe width="100%" height="90%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="text-center p-3" height="10%" style="background-color: rgba(0, 0, 0, 0)">
-    © EZ Clap Corporation <a href="php_tut/code/top-secret-login-page/logout.php" class="btn btn-light">Logout</a>
+    © EZ Clap Corporation <a href="php_tut/code/top-secret-login-page/logout.php" class="btn btn-info">Logout</a>
     </div> 
 </body>
 </html>
