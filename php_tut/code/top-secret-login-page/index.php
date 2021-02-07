@@ -10,7 +10,8 @@ if (isset($_COOKIE['ts_auth']))
     $key = $redis->get('ts_admin:token_key');
     $iv = $redis->get('ts_admin:iv');
     $message = openssl_decrypt($cookie, 'AES-128-CTR', $key, 0, $iv);
-    echo $message;
+    $json_message = json_decode($message);
+    echo $json_message['uname'];
 }
 session_destroy();
 ?>
