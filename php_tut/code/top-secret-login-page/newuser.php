@@ -12,7 +12,7 @@ if ($conn->connect_error) {
 
 $stmt = $conn->prepare("select uid, uname, passwd from auth where uname=?");
 $stmt->bind_param("s", $_POST['uname']);
-$stmt->execute();
+if (!$stmt->execute()) http_response_code(500);
 $stmt->bind_result($uid, $uname, $passwd_enc);
 $i = 0;
 while ($stmt->fetch())
@@ -26,8 +26,15 @@ if ($i != 0)
     header('Location: /php_tut/code/top-secret-login-page/new.php');
     exit();
 }
+$stmt->close();
 
-$processed_passwd = hash('sha256', $_POST['passwd']);
+$processed_passwd = password_hash($_POST['passwd'], PASSWORD_DEFAULT);
+$stmt = $conn->prepare("insert into auth (uid, uname, passwd) values (NULL, ?, ?)");
+$stmt->bind_param("ss", $_POST['uname'], $processed_passwd);
+if (!$stmt->execute()) http_response_code(500);
+$stmt->close();
+$conn->close();
 
-
+header('Location: /php_tut/code/top-secret-login-page/index.php');
+exit();
 ?>
