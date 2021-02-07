@@ -36,6 +36,6 @@ session_destroy();
     </style>
 </head>
 <body>
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
