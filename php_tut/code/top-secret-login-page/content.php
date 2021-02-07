@@ -22,4 +22,15 @@ else
 }
 session_destroy();
 ?>
-<iframe src="https://player.vimeo.com/video/148751763" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rick Astley's masterpiece was not playable through an embed :(</title>
+</head>
+<body>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKue4WuagL8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>
