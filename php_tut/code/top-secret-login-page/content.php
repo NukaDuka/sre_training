@@ -41,9 +41,9 @@ session_destroy();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div class="text-right p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    <iframe width="100%" height="95%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
         <a href="php_tut/code/top-secret-login-page/logout.php" class="btn btn-light">Logout</a>
     </div> 
-    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mKue4WuagL8?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </body>
 </html>
