@@ -71,7 +71,7 @@ session_destroy()
                         <input type="password" id="cpasswd" name="cpasswd" class="form-control" onkeyup='check();' placeholder="Password" autocomplete="off" required>
                     </div>
                 </div>
-               <button type="submit" name="submit" id="submit" class="btn btn-primary" disabled>Sign in</button>
+               <button type="submit" name="submit" id="submit" class="btn btn-primary" disabled>Create Account</button>
             </form>
             
         </div>
