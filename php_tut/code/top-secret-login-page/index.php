@@ -6,8 +6,7 @@ if (isset($_COOKIE['ts_auth'])
 {
     $cookie = $_COOKIE['ts_auth'];
     echo $cookie;
-})
-print_r($_SESSION);
+}
 session_destroy();
 ?>
 <!DOCTYPE html>
