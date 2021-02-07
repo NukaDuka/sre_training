@@ -2,7 +2,8 @@
 // if session cookie exists, validate it with redis
 // if it is correct, redirect to content automatically
 session_start();
-$_SESSION['src'] = 'new';
+print_r($_SESSION);
+session_destroy()
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +51,7 @@ $_SESSION['src'] = 'new';
             <h2 class="text-center">Create new account</h2>
             <hr class="my-4">
             <!-- TODO: Learn how to use TLS ;-; -->
-            <form id="form" action="validate.php" method="post" novalidate>
+            <form id="form" action="newuser.php" method="post" novalidate>
                 <div class="form-group row">
                     <label for="uname" class="col-sm-3 col-form-label">Username: </label>
                     <div class="col-sm-9">
