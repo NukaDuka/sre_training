@@ -1,7 +1,6 @@
 <?php 
 session_start();
-print_r($_SESSION);
-session_destroy()
+session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -48,6 +47,9 @@ session_destroy()
         <div class="jumbotron">
             <h2 class="text-center">Create new account</h2>
             <hr class="my-4">
+            <?php 
+            if (isset($_SESSION['exists']) && $_SESSION['exists'] == true) echo '<div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><p class="text-center">User already exists.</p></div>';
+            ?>
             <!-- TODO: Learn how to use TLS ;-; -->
             <form id="form" action="newuser.php" method="post" novalidate>
                 <div class="form-group row">
@@ -76,3 +78,6 @@ session_destroy()
     </div>
 </body>
 </html>
+<?php
+$_SESSION['exists'] = false;
+?>

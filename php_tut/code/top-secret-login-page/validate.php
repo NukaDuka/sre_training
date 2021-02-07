@@ -1,17 +1,5 @@
 <?php 
 session_start();
-$redis = new Redis();
-$redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
-$key = $redis->get('ts_admin:token_key');
-$iv = $redis->get('ts_admin:iv');
-$_SESSION['key'] = $key;
-$_SESSION['iv'] = $iv;
-
-$token = hash('sha256', uniqid(session_id(), true));
-$cookie = openssl_encrypt(json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), "AES-128-CTR", $key, 0, $iv);
-$_SESSION['cook'] = $cookie;
-
-
 if (!isset($_POST['submit'])) {
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
@@ -47,6 +35,8 @@ $redis = new Redis();
 $redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
 $key = $redis->get('ts_admin:token_key');
 $iv = $redis->get('ts_admin:iv');
+$stmt->close();
+$conn->close();
 if (password_verify($_POST['passwd'], $passwd_enc))
 {
     $token = hash('sha256', uniqid(session_id(), true));
@@ -55,6 +45,7 @@ if (password_verify($_POST['passwd'], $passwd_enc))
     $redis->del('ts:' . $_POST['uname']);
     setcookie('ts_auth', $cookie, time() + $cookie_time, '/php_tut/code/top-secret-login-page');
     $redis->set('ts:' . $_POST['uname'], $token, $cookie_time);
+    $redis->close();
     header('Location: /php_tut/code/top-secret-login-page/content.php');
     exit();
 }
@@ -62,10 +53,10 @@ else
 {
     $_SESSION['unauth'] = true; 
     $_SESSION['uname'] = $_POST['uname'];
+    $redis->close();
     header('Location: /php_tut/code/top-secret-login-page/index.php');
     exit();
 }
-$stmt->close();
-$conn->close();
+
 
 ?>

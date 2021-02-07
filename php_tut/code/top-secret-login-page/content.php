@@ -7,6 +7,7 @@ if (isset($_COOKIE['ts_auth']))
     $redis->connect('redis', 6379, 1, NULL, 0, 0, ['auth' => ['ts-redis', 'dGVzdHBhc3N3ZAo']]);
     $key = $redis->get('ts_admin:token_key');
     $iv = $redis->get('ts_admin:iv');
+    $redis->close();
     $message = openssl_decrypt($cookie, 'AES-128-CTR', $key, 0, $iv);
     $json_message = json_decode($message);
     if (!hash_equals($json_message->token, $redis->get('ts:' . $json_message->uname))){
