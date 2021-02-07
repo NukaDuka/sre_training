@@ -58,7 +58,7 @@ if (password_verify($_POST['passwd'], $passwd_enc))
     $cookie_time = isset($_POST['persist']) ? 86400 : 1200;
     $redis->del('ts:' . $_POST['uname']);
     //setcookie('ts_auth', $cookie, time() + $cookie_time, '/php_tut/code/top-secret-login-page', ['secure' => true, 'httponly' => true, 'samesite' => 'None',]);
-    $redis->set('ts:' . $_POST['uname'], $token, $cookie_time);
+    $redis->setEx('ts:' . $_POST['uname'], $cookie_time, $token);
     header('Location: /php_tut/code/top-secret-login-page/content.php');
     exit();
 }
