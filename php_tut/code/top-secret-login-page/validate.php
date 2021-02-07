@@ -40,7 +40,6 @@ if ($i == 0)
 }
 else if ($i > 1)
 {
-    //username cannot exist more than once, ensure it in new.php
     die($i);
 }
 
@@ -50,9 +49,6 @@ $key = $redis->get('ts_admin:token_key');
 $iv = $redis->get('ts_admin:iv');
 if (password_verify($_POST['passwd'], $passwd_enc))
 {
-    //redirect to content
-    //create cookie 
-    
     $token = hash('sha256', uniqid(session_id(), true));
     $cookie = openssl_encrypt(json_encode(array("uname"=>$_POST['uname'], "token"=>$token)), "AES-128-CTR", $key, 0, $iv);
     $cookie_time = isset($_POST['persist']) ? 86400 : 1200;
