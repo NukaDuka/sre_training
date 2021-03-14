@@ -16,16 +16,13 @@
 			<article class="main-content col-xs-8">
 			
 		
-	
+	<a href="?clicked=1">Click Here!</a>
 	<?php 
-
-	/*  Create a link saying Click Here, and set 
-	the link href to pass some parameters and use the GET super global to see it
-
-		Step 2 - Set a cookie that expires in one week
-
-		Step 3 - Start a session and set it to value, any value you want.
-	*/
+	print_r($_SESSION);
+	if isset($_GET['clicked']) echo 'Bonk!';
+	setcookie('cookie', 'this lasts a week', 604800);
+	session_start();
+	$_SESSION['ping'] = 'pong';
 	
 	?>
 
