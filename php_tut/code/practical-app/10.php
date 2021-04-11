@@ -21,7 +21,7 @@
 
 	class Dog implements Animal
 	{
-		private $name
+		private $name;
 		private $eye_color;
 		private $type;
 		private $fur_color;
@@ -45,9 +45,9 @@
 		}
 	}
 	
-	#$pitbull = new Dog("Buster", "Brown", "Pitbull", "Light Gray");
-	#$pitbull->ShowAll();
-	#unset($pitbull);
+	$pitbull = new Dog("Buster", "Brown", "Pitbull", "Light Gray");
+	$pitbull->ShowAll();
+	unset($pitbull);
 	
 	?>
 
