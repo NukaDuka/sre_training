@@ -36,7 +36,7 @@
 
 		function __destruct()
 		{
-			echo "<hr><div style=\"color:red\"><b><i>apology for poor english<br>where were you when " . $this->name . " the " . $this->type . " dies?<br>i was at home eating Maggi 2-Minute Noodles Masala, 70g (Pack of 12) when pjotr ring<br>'" . $this->name . "is kill'<br>'no'</b></i></div>";
+			echo "<hr><div style=\"color:red\"><b><i>apology for poor english<br>where were you when " . $this->name . " the " . $this->type . " dies?<br>i was at home eating Maggi 2-Minute Noodles Masala, 70g (Pack of 12) when pjotr ring<br>'" . $this->name . " is kill'<br>'no'</b></i></div>";
 		}
 
 		public function ShowAll()
