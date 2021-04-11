@@ -45,9 +45,9 @@
 		}
 	}
 	
-	$pitbull = new Dog("Buster", "Brown", "Pitbull", "Light Gray");
-	$pitbull->ShowAll();
-	unset($pitbull);
+	#$pitbull = new Dog("Buster", "Brown", "Pitbull", "Light Gray");
+	#$pitbull->ShowAll();
+	#unset($pitbull);
 	
 	?>
 
