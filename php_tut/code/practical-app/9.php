@@ -18,10 +18,10 @@
 		
 	<a href="?clicked=1">Click Here!</a>
 	<?php 
+	session_start();
 	print_r($_SESSION);
 	if (isset($_GET['clicked'])) echo 'Bonk!';
 	setcookie('cookie', 'this lasts a week', 604800);
-	session_start();
 	$_SESSION['ping'] = 'pong';
 	
 	?>
